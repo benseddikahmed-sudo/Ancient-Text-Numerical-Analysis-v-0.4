@@ -1,0 +1,102 @@
+# Citation File Format (CFF)
+# For automatic citation generation on GitHub and Zenodo
+# Spec: https://citation-file-format.github.io/
+
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "Ancient Text Numerical Analysis Framework"
+version: 4.0.0-dsh
+doi: 10.5281/zenodo.XXXXXXX
+date-released: 2025-10-26
+url: "https://github.com/ahmedbenseddik/ancient-text-analysis"
+repository-code: "https://github.com/ahmedbenseddik/ancient-text-analysis"
+license: MIT
+
+authors:
+  - family-names: "Benseddik"
+    given-names: "Ahmed"
+    email: "benseddik.ahmed@gmail.com"
+    orcid: "https://orcid.org/0000-0000-0000-0000"
+
+abstract: >
+  A rigorous, reproducible framework for computational analysis 
+  of numerical patterns in ancient texts using multiple cultural 
+  systems (Hebrew, Greek, Arabic) with comprehensive statistical 
+  validation and ethical considerations. Implements frequentist, 
+  Bayesian, and non-parametric methods with integrated power 
+  analysis, sensitivity testing, and reproducibility features.
+
+keywords:
+  - digital humanities
+  - text analysis
+  - gematria
+  - statistical methods
+  - bayesian inference
+  - reproducibility
+  - ancient texts
+  - computational humanities
+  - python
+  - open science
+
+type: software
+
+preferred-citation:
+  type: article
+  title: "Ancient Text Numerical Analysis: A Statistical Framework with Ethical Considerations"
+  authors:
+    - family-names: "Benseddik"
+      given-names: "Ahmed"
+      email: "benseddik.ahmed@gmail.com"
+  journal: "Digital Scholarship in the Humanities"
+  year: 2025
+  volume: XX
+  issue: X
+  start: 1
+  end: 30
+  doi: 10.1093/llc/fqXXXXX
+
+references:
+  - type: book
+    title: "Bayesian Data Analysis"
+    authors:
+      - family-names: "Gelman"
+        given-names: "Andrew"
+      - family-names: "Carlin"
+        given-names: "John B."
+      - family-names: "Stern"
+        given-names: "Hal S."
+      - family-names: "Dunson"
+        given-names: "David B."
+      - family-names: "Vehtari"
+        given-names: "Aki"
+      - family-names: "Rubin"
+        given-names: "Donald B."
+    year: 2013
+    publisher:
+      name: "CRC Press"
+    edition: "3rd"
+    
+  - type: book
+    title: "An Introduction to the Bootstrap"
+    authors:
+      - family-names: "Efron"
+        given-names: "Bradley"
+      - family-names: "Tibshirani"
+        given-names: "Robert J."
+    year: 1994
+    publisher:
+      name: "Chapman & Hall/CRC"
+      
+  - type: article
+    title: "Controlling the false discovery rate: A practical and powerful approach to multiple testing"
+    authors:
+      - family-names: "Benjamini"
+        given-names: "Yoav"
+      - family-names: "Hochberg"
+        given-names: "Yosef"
+    journal: "Journal of the Royal Statistical Society: Series B"
+    year: 1995
+    volume: 57
+    issue: 1
+    start: 289
+    end: 300

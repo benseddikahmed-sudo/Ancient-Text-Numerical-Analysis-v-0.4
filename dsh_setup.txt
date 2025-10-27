@@ -1,0 +1,165 @@
+#!/usr/bin/env python3
+"""
+Setup configuration for Ancient Text Numerical Analysis Framework
+==================================================================
+
+Installation:
+    pip install -e .                    # Development install
+    pip install -e ".[dev]"            # With development tools
+    pip install -e ".[bayesian]"       # With Bayesian support
+    pip install -e ".[all]"            # Everything
+
+Author: Ahmed Benseddik
+License: MIT
+"""
+
+from setuptools import setup, find_packages
+from pathlib import Path
+
+# Read long description from README
+readme_file = Path(__file__).parent / "README.md"
+long_description = readme_file.read_text(encoding="utf-8") if readme_file.exists() else ""
+
+# Read version from __init__.py
+version_file = Path(__file__).parent / "ancient_text_analysis" / "__version__.py"
+version = "4.0.0-dsh"
+
+setup(
+    name="ancient-text-analysis",
+    version=version,
+    author="Ahmed Benseddik",
+    author_email="benseddik.ahmed@gmail.com",
+    description="Statistical framework for numerical analysis of ancient texts",
+    long_description=long_description,
+    long_description_content_type="text/markdown",
+    url="https://github.com/ahmedbenseddik/ancient-text-analysis",
+    project_urls={
+        "Documentation": "https://ancient-text-analysis.readthedocs.io",
+        "Source": "https://github.com/ahmedbenseddik/ancient-text-analysis",
+        "Tracker": "https://github.com/ahmedbenseddik/ancient-text-analysis/issues",
+    },
+    packages=find_packages(exclude=["tests", "docs", "examples"]),
+    classifiers=[
+        "Development Status :: 4 - Beta",
+        "Intended Audience :: Science/Research",
+        "Intended Audience :: Education",
+        "Topic :: Scientific/Engineering :: Information Analysis",
+        "Topic :: Text Processing :: Linguistic",
+        "License :: OSI Approved :: MIT License",
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3.10",
+        "Programming Language :: Python :: 3.11",
+        "Programming Language :: Python :: 3.12",
+        "Operating System :: OS Independent",
+    ],
+    keywords=[
+        "digital-humanities",
+        "text-analysis",
+        "gematria",
+        "statistics",
+        "bayesian",
+        "reproducibility",
+        "ancient-texts",
+        "computational-humanities"
+    ],
+    python_requires=">=3.9",
+    
+    # Core dependencies
+    install_requires=[
+        "numpy>=1.24.0,<2.0.0",
+        "scipy>=1.10.0",
+        "pandas>=2.0.0",
+        "matplotlib>=3.7.0",
+        "seaborn>=0.12.0",
+    ],
+    
+    # Optional dependencies
+    extras_require={
+        # Bayesian analysis support
+        "bayesian": [
+            "pymc>=5.0.0",
+            "arviz>=0.15.0",
+        ],
+        
+        # Performance optimization
+        "performance": [
+            "numba>=0.57.0",
+        ],
+        
+        # Development tools
+        "dev": [
+            "pytest>=7.0.0",
+            "pytest-cov>=4.0.0",
+            "pytest-xdist>=3.0.0",
+            "hypothesis>=6.0.0",
+            "black>=23.0.0",
+            "flake8>=6.0.0",
+            "mypy>=1.0.0",
+            "pylint>=2.17.0",
+            "isort>=5.12.0",
+            "pre-commit>=3.0.0",
+        ],
+        
+        # Documentation
+        "docs": [
+            "sphinx>=6.0.0",
+            "sphinx-rtd-theme>=1.2.0",
+            "myst-parser>=1.0.0",
+            "sphinx-autodoc-typehints>=1.22.0",
+            "nbsphinx>=0.9.0",
+        ],
+        
+        # Jupyter notebooks
+        "notebooks": [
+            "jupyter>=1.0.0",
+            "notebook>=6.5.0",
+            "ipywidgets>=8.0.0",
+            "ipython>=8.0.0",
+        ],
+        
+        # Complete installation
+        "all": [
+            "pymc>=5.0.0",
+            "arviz>=0.15.0",
+            "numba>=0.57.0",
+            "pytest>=7.0.0",
+            "pytest-cov>=4.0.0",
+            "hypothesis>=6.0.0",
+            "sphinx>=6.0.0",
+            "sphinx-rtd-theme>=1.2.0",
+            "jupyter>=1.0.0",
+            "black>=23.0.0",
+        ],
+    },
+    
+    # Entry points for command-line tools
+    entry_points={
+        "console_scripts": [
+            "ancient-text-analysis=ancient_text_analysis.cli:main",
+            "ata=ancient_text_analysis.cli:main",  # Short alias
+        ],
+    },
+    
+    # Include non-Python files
+    include_package_data=True,
+    package_data={
+        "ancient_text_analysis": [
+            "data/*.txt",
+            "data/*.json",
+            "configs/*.yaml",
+            "templates/*.md",
+        ],
+    },
+    
+    # Zip safety
+    zip_safe=False,
+    
+    # Test suite
+    test_suite="tests",
+    tests_require=[
+        "pytest>=7.0.0",
+        "pytest-cov>=4.0.0",
+        "hypothesis>=6.0.0",
+    ],
+)

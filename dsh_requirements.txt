@@ -1,0 +1,55 @@
+# Ancient Text Numerical Analysis Framework - DSH Edition
+# Python Dependencies
+# ====================
+
+# Core scientific computing
+numpy>=1.24.0,<2.0.0
+scipy>=1.10.0
+pandas>=2.0.0
+
+# Visualization
+matplotlib>=3.7.0
+seaborn>=0.12.0
+
+# Statistical analysis
+statsmodels>=0.14.0
+
+# Bayesian modeling (optional but recommended)
+pymc>=5.0.0
+arviz>=0.15.0
+
+# Performance optimization (optional)
+numba>=0.57.0
+
+# Testing
+pytest>=7.0.0
+pytest-cov>=4.0.0
+hypothesis>=6.0.0
+
+# Documentation
+sphinx>=6.0.0
+sphinx-rtd-theme>=1.2.0
+myst-parser>=1.0.0
+
+# Code quality
+black>=23.0.0
+flake8>=6.0.0
+mypy>=1.0.0
+pylint>=2.17.0
+
+# Jupyter notebooks (for examples)
+jupyter>=1.0.0
+notebook>=6.5.0
+ipywidgets>=8.0.0
+
+# Data handling
+openpyxl>=3.1.0  # For Excel export
+pyyaml>=6.0.0    # For YAML configs
+
+# Utilities
+tqdm>=4.65.0     # Progress bars
+click>=8.0.0     # CLI enhancement (alternative to argparse)
+
+# Version pinning for reproducibility
+# Generated: 2025-10-26
+# Python version: >=3.9,<3.13
