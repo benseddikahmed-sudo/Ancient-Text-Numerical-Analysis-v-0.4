@@ -3,7 +3,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
-[![DOI](https://img.shields.io/badge/DOI-10.xxxx%2Fxxxx-blue)](https://doi.org/10.xxxx/xxxx)
+["https://doi.org/10.5281/zenodo.17443361"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.17443361.svg" alt="DOI"></a>
 
 A rigorous, reproducible framework for computational analysis of numerical patterns in ancient texts using multiple cultural systems (Hebrew, Greek, Arabic) with comprehensive statistical validation and ethical considerations.
 
@@ -269,7 +269,7 @@ If you use this framework in your research, please cite:
   journal={Digital Scholarship in the Humanities},
   year={2025},
   publisher={Oxford University Press},
-  doi={10.xxxx/dsh/xxxx}
+  doi=10.5281/zenodo.17443361
 }
 ```
 
@@ -287,7 +287,7 @@ Contributions are welcome! Please:
 
 ### Development Setup
 ```bash
-git clone https://github.com/[username]/ancient-text-analysis.git
+git clone https://github.com/benseddikahmed-sudo/Ancient-Text-Numerical-Analysis-v-0.4).git
 cd ancient-text-analysis
 pip install -e ".[dev]"
 pre-commit install
@@ -320,8 +320,8 @@ GitHub: [@ahmedbenseddik](https://github.com/ahmedbenseddik)
 ## 🔗 Links
 
 - **Documentation**: https://ancient-text-analysis.readthedocs.io
-- **Repository**: https://github.com/[username]/ancient-text-analysis
-- **Issue Tracker**: https://github.com/[username]/ancient-text-analysis/issues
+- **Repository**:https://github.com/benseddikahmed-sudo/Ancient-Text-Numerical-Analysis-v-0.4
+- **Issue Tracker**: https://github.com/benseddikahmed-sudo/Ancient-Text-Numerical-Analysis-v-0.4/issues
 - **DSH Journal**: https://academic.oup.com/dsh
 
 ---
