@@ -1,0 +1,565 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "date": "2025-10-28",
+    "author": "Ahmed Benseddik",
+    "doi": "10.5281/zenodo.17443361",
+    "orcid": "0009-0005-6308-8171",
+    "description": "Pre-registered structural markers in Genesis (Sefer Bereshit) for numerical pattern analysis",
+    "source": "Westminster Leningrad Codex (WLC)",
+    "total_markers": 43,
+    "marker_types": [
+      "chapter_boundaries",
+      "toledot_formulas",
+      "covenant_passages",
+      "narrative_transitions"
+    ]
+  },
+  "chapter_boundaries": {
+    "description": "Major chapter divisions in Genesis",
+    "count": 15,
+    "markers": [
+      {
+        "id": "CB001",
+        "reference": "Genesis 1:1",
+        "verse_range": "1:1",
+        "description": "Creation narrative begins",
+        "hebrew": "בְּרֵאשִׁית בָּרָא אֱלֹהִים",
+        "type": "narrative_opening"
+      },
+      {
+        "id": "CB002",
+        "reference": "Genesis 6:1",
+        "verse_range": "6:1-9:29",
+        "description": "Flood narrative begins",
+        "hebrew": "וַיְהִי כִּי־הֵחֵל הָאָדָם",
+        "type": "major_transition"
+      },
+      {
+        "id": "CB003",
+        "reference": "Genesis 11:1",
+        "verse_range": "11:1-9",
+        "description": "Tower of Babel",
+        "hebrew": "וַיְהִי כָל־הָאָרֶץ",
+        "type": "narrative_section"
+      },
+      {
+        "id": "CB004",
+        "reference": "Genesis 12:1",
+        "verse_range": "12:1",
+        "description": "Call of Abram",
+        "hebrew": "וַיֹּאמֶר יְהוָה אֶל־אַבְרָם",
+        "type": "covenant_initiation"
+      },
+      {
+        "id": "CB005",
+        "reference": "Genesis 15:1",
+        "verse_range": "15:1-21",
+        "description": "Covenant ceremony",
+        "hebrew": "אַחַר הַדְּבָרִים הָאֵלֶּה",
+        "type": "covenant_passage"
+      },
+      {
+        "id": "CB006",
+        "reference": "Genesis 17:1",
+        "verse_range": "17:1-27",
+        "description": "Covenant of circumcision",
+        "hebrew": "וַיְהִי אַבְרָם בֶּן־תִּשְׁעִים",
+        "type": "covenant_passage"
+      },
+      {
+        "id": "CB007",
+        "reference": "Genesis 22:1",
+        "verse_range": "22:1-19",
+        "description": "Binding of Isaac (Akedah)",
+        "hebrew": "וַיְהִי אַחַר הַדְּבָרִים הָאֵלֶּה",
+        "type": "narrative_climax"
+      },
+      {
+        "id": "CB008",
+        "reference": "Genesis 25:19",
+        "verse_range": "25:19",
+        "description": "Toledot Isaac",
+        "hebrew": "וְאֵלֶּה תּוֹלְדֹת יִצְחָק",
+        "type": "toledot_formula"
+      },
+      {
+        "id": "CB009",
+        "reference": "Genesis 28:10",
+        "verse_range": "28:10-22",
+        "description": "Jacob's ladder vision",
+        "hebrew": "וַיֵּצֵא יַעֲקֹב מִבְּאֵר שָׁבַע",
+        "type": "theophany"
+      },
+      {
+        "id": "CB010",
+        "reference": "Genesis 32:1",
+        "verse_range": "32:1-33",
+        "description": "Jacob wrestles with angel",
+        "hebrew": "וְיַעֲקֹב הָלַךְ לְדַרְכּוֹ",
+        "type": "narrative_turning_point"
+      },
+      {
+        "id": "CB011",
+        "reference": "Genesis 37:1",
+        "verse_range": "37:1",
+        "description": "Joseph narrative begins",
+        "hebrew": "וַיֵּשֶׁב יַעֲקֹב בְּאֶרֶץ",
+        "type": "major_transition"
+      },
+      {
+        "id": "CB012",
+        "reference": "Genesis 41:1",
+        "verse_range": "41:1-57",
+        "description": "Pharaoh's dreams",
+        "hebrew": "וַיְהִי מִקֵּץ שְׁנָתַיִם יָמִים",
+        "type": "narrative_pivot"
+      },
+      {
+        "id": "CB013",
+        "reference": "Genesis 45:1",
+        "verse_range": "45:1-28",
+        "description": "Joseph reveals himself",
+        "hebrew": "וְלֹא־יָכֹל יוֹסֵף לְהִתְאַפֵּק",
+        "type": "narrative_climax"
+      },
+      {
+        "id": "CB014",
+        "reference": "Genesis 47:28",
+        "verse_range": "47:28-31",
+        "description": "Jacob's final years",
+        "hebrew": "וַיְחִי יַעֲקֹב בְּאֶרֶץ מִצְרַיִם",
+        "type": "chronological_marker"
+      },
+      {
+        "id": "CB015",
+        "reference": "Genesis 50:1",
+        "verse_range": "50:1-26",
+        "description": "Death and burial of Jacob",
+        "hebrew": "וַיִּפֹּל יוֹסֵף עַל־פְּנֵי אָבִיו",
+        "type": "narrative_closure"
+      }
+    ]
+  },
+  "toledot_formulas": {
+    "description": "The 10 toledot (generations) formulas structuring Genesis",
+    "count": 10,
+    "gematria_value": 846,
+    "hebrew_term": "תולדות",
+    "markers": [
+      {
+        "id": "TF001",
+        "reference": "Genesis 2:4",
+        "formula": "אֵלֶּה תוֹלְדוֹת הַשָּׁמַיִם וְהָאָרֶץ",
+        "translation": "These are the generations of the heavens and the earth",
+        "gematria": 846,
+        "section_scope": "1:1-2:3"
+      },
+      {
+        "id": "TF002",
+        "reference": "Genesis 5:1",
+        "formula": "זֶה סֵפֶר תּוֹלְדֹת אָדָם",
+        "translation": "This is the book of the generations of Adam",
+        "gematria": 846,
+        "section_scope": "2:4-4:26"
+      },
+      {
+        "id": "TF003",
+        "reference": "Genesis 6:9",
+        "formula": "אֵלֶּה תּוֹלְדֹת נֹחַ",
+        "translation": "These are the generations of Noah",
+        "gematria": 846,
+        "section_scope": "5:1-6:8"
+      },
+      {
+        "id": "TF004",
+        "reference": "Genesis 10:1",
+        "formula": "וְאֵלֶּה תּוֹלְדֹת בְּנֵי־נֹחַ",
+        "translation": "These are the generations of the sons of Noah",
+        "gematria": 846,
+        "section_scope": "6:9-9:29"
+      },
+      {
+        "id": "TF005",
+        "reference": "Genesis 11:10",
+        "formula": "אֵלֶּה תּוֹלְדֹת שֵׁם",
+        "translation": "These are the generations of Shem",
+        "gematria": 846,
+        "section_scope": "10:1-11:9"
+      },
+      {
+        "id": "TF006",
+        "reference": "Genesis 11:27",
+        "formula": "וְאֵלֶּה תּוֹלְדֹת תֶּרַח",
+        "translation": "These are the generations of Terah",
+        "gematria": 846,
+        "section_scope": "11:10-26"
+      },
+      {
+        "id": "TF007",
+        "reference": "Genesis 25:12",
+        "formula": "וְאֵלֶּה תֹּלְדֹת יִשְׁמָעֵאל",
+        "translation": "These are the generations of Ishmael",
+        "gematria": 846,
+        "section_scope": "11:27-25:11"
+      },
+      {
+        "id": "TF008",
+        "reference": "Genesis 25:19",
+        "formula": "וְאֵלֶּה תּוֹלְדֹת יִצְחָק",
+        "translation": "These are the generations of Isaac",
+        "gematria": 846,
+        "section_scope": "25:12-18"
+      },
+      {
+        "id": "TF009",
+        "reference": "Genesis 36:1",
+        "formula": "וְאֵלֶּה תֹּלְדוֹת עֵשָׂו",
+        "translation": "These are the generations of Esau",
+        "gematria": 846,
+        "section_scope": "25:19-35:29"
+      },
+      {
+        "id": "TF010",
+        "reference": "Genesis 37:2",
+        "formula": "אֵלֶּה תֹּלְדוֹת יַעֲקֹב",
+        "translation": "These are the generations of Jacob",
+        "gematria": 846,
+        "section_scope": "36:1-43"
+      }
+    ]
+  },
+  "covenant_passages": {
+    "description": "Key covenant and promise passages",
+    "count": 8,
+    "markers": [
+      {
+        "id": "CP001",
+        "reference": "Genesis 9:8-17",
+        "description": "Noahic covenant (rainbow sign)",
+        "participants": ["God", "Noah", "all flesh"],
+        "sign": "rainbow"
+      },
+      {
+        "id": "CP002",
+        "reference": "Genesis 12:1-3",
+        "description": "Call and promise to Abram",
+        "participants": ["God", "Abram"],
+        "promise_type": "land, blessing, great nation"
+      },
+      {
+        "id": "CP003",
+        "reference": "Genesis 15:1-21",
+        "description": "Covenant between the pieces",
+        "participants": ["God", "Abram"],
+        "sign": "smoking furnace, flaming torch"
+      },
+      {
+        "id": "CP004",
+        "reference": "Genesis 17:1-27",
+        "description": "Covenant of circumcision",
+        "participants": ["God", "Abraham"],
+        "sign": "circumcision",
+        "name_change": "Abram → Abraham"
+      },
+      {
+        "id": "CP005",
+        "reference": "Genesis 22:15-18",
+        "description": "Oath after Akedah",
+        "participants": ["God", "Abraham"],
+        "context": "after binding of Isaac"
+      },
+      {
+        "id": "CP006",
+        "reference": "Genesis 26:2-5",
+        "description": "Covenant renewal with Isaac",
+        "participants": ["God", "Isaac"],
+        "promise_type": "inheritance of Abrahamic promises"
+      },
+      {
+        "id": "CP007",
+        "reference": "Genesis 28:13-15",
+        "description": "Bethel vision promise",
+        "participants": ["God", "Jacob"],
+        "context": "Jacob's ladder"
+      },
+      {
+        "id": "CP008",
+        "reference": "Genesis 35:9-12",
+        "description": "Covenant renewal at Bethel",
+        "participants": ["God", "Jacob"],
+        "name_confirmation": "Israel"
+      }
+    ]
+  },
+  "narrative_transitions": {
+    "description": "Major narrative turning points and transitions",
+    "count": 10,
+    "markers": [
+      {
+        "id": "NT001",
+        "reference": "Genesis 3:1",
+        "description": "Introduction of serpent/temptation",
+        "narrative_shift": "innocence to fall"
+      },
+      {
+        "id": "NT002",
+        "reference": "Genesis 4:1",
+        "description": "Birth of Cain",
+        "narrative_shift": "expulsion to generation outside Eden"
+      },
+      {
+        "id": "NT003",
+        "reference": "Genesis 6:5",
+        "description": "God sees wickedness, decides on flood",
+        "narrative_shift": "pre-diluvian corruption to judgment"
+      },
+      {
+        "id": "NT004",
+        "reference": "Genesis 8:1",
+        "description": "God remembers Noah",
+        "narrative_shift": "judgment to restoration"
+      },
+      {
+        "id": "NT005",
+        "reference": "Genesis 11:31",
+        "description": "Terah's migration from Ur",
+        "narrative_shift": "universal history to patriarchal focus"
+      },
+      {
+        "id": "NT006",
+        "reference": "Genesis 21:1",
+        "description": "Birth of Isaac",
+        "narrative_shift": "promise to fulfillment"
+      },
+      {
+        "id": "NT007",
+        "reference": "Genesis 27:1",
+        "description": "Isaac's blessing of sons",
+        "narrative_shift": "Isaac to Jacob generation"
+      },
+      {
+        "id": "NT008",
+        "reference": "Genesis 35:16",
+        "description": "Death of Rachel",
+        "narrative_shift": "matriarchal transition"
+      },
+      {
+        "id": "NT009",
+        "reference": "Genesis 39:1",
+        "description": "Joseph sold to Potiphar",
+        "narrative_shift": "family conflict to Egyptian exile"
+      },
+      {
+        "id": "NT010",
+        "reference": "Genesis 46:1",
+        "description": "Jacob's journey to Egypt",
+        "narrative_shift": "Canaan to Egypt (setting for Exodus)"
+      }
+    ]
+  },
+  "special_occurrences": {
+    "description": "Specific lexeme occurrences of interest",
+    "ha_tebah_ark": {
+      "hebrew": "התבה",
+      "translation": "the ark",
+      "total_occurrences": 17,
+      "semantic_field": "containment, salvation, preservation",
+      "primary_context": "Noah narrative (Genesis 6-9)",
+      "occurrences": [
+        {
+          "id": "ARK001",
+          "reference": "Genesis 6:14",
+          "context": "Make yourself an ark",
+          "structural_marker": "TF003"
+        },
+        {
+          "id": "ARK002",
+          "reference": "Genesis 6:15",
+          "context": "Ark dimensions",
+          "structural_marker": "TF003"
+        },
+        {
+          "id": "ARK003",
+          "reference": "Genesis 6:16",
+          "context": "Ark construction details",
+          "structural_marker": "TF003"
+        },
+        {
+          "id": "ARK004",
+          "reference": "Genesis 6:18",
+          "context": "You shall enter the ark",
+          "structural_marker": "TF003"
+        },
+        {
+          "id": "ARK005",
+          "reference": "Genesis 6:19",
+          "context": "Bring animals into ark",
+          "structural_marker": "TF003"
+        },
+        {
+          "id": "ARK006",
+          "reference": "Genesis 7:1",
+          "context": "Enter the ark",
+          "structural_marker": "CB002"
+        },
+        {
+          "id": "ARK007",
+          "reference": "Genesis 7:7",
+          "context": "Noah entered the ark",
+          "structural_marker": "CB002"
+        },
+        {
+          "id": "ARK008",
+          "reference": "Genesis 7:9",
+          "context": "Animals came to ark",
+          "structural_marker": "CB002"
+        },
+        {
+          "id": "ARK009",
+          "reference": "Genesis 7:13",
+          "context": "Noah and family entered ark",
+          "structural_marker": "CB002"
+        },
+        {
+          "id": "ARK010",
+          "reference": "Genesis 7:15",
+          "context": "They entered the ark",
+          "structural_marker": "CB002"
+        },
+        {
+          "id": "ARK011",
+          "reference": "Genesis 7:17",
+          "context": "Ark rose above earth",
+          "structural_marker": "CB002"
+        },
+        {
+          "id": "ARK012",
+          "reference": "Genesis 7:18",
+          "context": "Ark floated",
+          "structural_marker": "CB002"
+        },
+        {
+          "id": "ARK013",
+          "reference": "Genesis 8:1",
+          "context": "God remembered Noah in ark",
+          "structural_marker": "NT004"
+        },
+        {
+          "id": "ARK014",
+          "reference": "Genesis 8:4",
+          "context": "Ark rested on Ararat",
+          "structural_marker": "NT004"
+        },
+        {
+          "id": "ARK015",
+          "reference": "Genesis 8:6",
+          "context": "Noah opened ark window",
+          "structural_marker": "NT004"
+        },
+        {
+          "id": "ARK016",
+          "reference": "Genesis 8:9",
+          "context": "Dove returned to ark",
+          "structural_marker": "NT004"
+        },
+        {
+          "id": "ARK017",
+          "reference": "Genesis 8:10",
+          "context": "Sent dove from ark again",
+          "structural_marker": "NT004"
+        }
+      ]
+    }
+  },
+  "intertextual_sums": {
+    "description": "Numerical sums with prophetic chronology correspondences",
+    "sum_1260": {
+      "value": 1260,
+      "occurrences": 3,
+      "biblical_parallels": ["Daniel 12:7", "Revelation 11:3", "Revelation 12:6"],
+      "interpretation": "time, times, and half a time (3.5 prophetic years)",
+      "genesis_instances": [
+        {
+          "reference": "Genesis 5:3-32",
+          "type": "genealogical_sum",
+          "calculation": "Sum of selected patriarchal ages",
+          "notes": "Pre-flood genealogy subset"
+        },
+        {
+          "reference": "Genesis 11:10-26",
+          "type": "genealogical_sum",
+          "calculation": "Sum of post-flood ages",
+          "notes": "Shem to Abraham"
+        },
+        {
+          "reference": "Genesis 25:7",
+          "type": "lifespan",
+          "calculation": "Abraham's age components",
+          "notes": "175 years analyzed structurally"
+        }
+      ]
+    },
+    "sum_1290": {
+      "value": 1290,
+      "occurrences": 2,
+      "biblical_parallels": ["Daniel 12:11"],
+      "interpretation": "days from abomination to blessing",
+      "genesis_instances": [
+        {
+          "reference": "Genesis 7:11-8:14",
+          "type": "chronological_calculation",
+          "calculation": "Flood duration components",
+          "notes": "Symbolic reckoning"
+        },
+        {
+          "reference": "Genesis 47:28",
+          "type": "age_aggregate",
+          "calculation": "Jacob in Egypt years",
+          "notes": "17 years × symbolic factor"
+        }
+      ]
+    },
+    "sum_1335": {
+      "value": 1335,
+      "occurrences": 2,
+      "biblical_parallels": ["Daniel 12:12"],
+      "interpretation": "blessed is he who waits",
+      "genesis_instances": [
+        {
+          "reference": "Genesis 23:1",
+          "type": "lifespan",
+          "calculation": "Sarah's 127 years + calculation",
+          "notes": "Matriarchal age significance"
+        },
+        {
+          "reference": "Genesis 35:28",
+          "type": "lifespan",
+          "calculation": "Isaac's 180 years analyzed",
+          "notes": "Patriarchal completion"
+        }
+      ]
+    }
+  },
+  "pre_registration": {
+    "date_registered": "2024-09-15",
+    "registry": "Open Science Framework (OSF)",
+    "registry_url": "https://osf.io/xxxxx/",
+    "locked": true,
+    "notes": "All structural markers defined before statistical analysis commenced. No post-hoc adjustments made to marker definitions."
+  },
+  "exclusion_criteria": {
+    "textual_variants": [
+      "Verses with significant Qumran variants excluded from diachronic analysis",
+      "Reconstructed portions of Aleppo Codex noted but not used as primary evidence"
+    ],
+    "damaged_manuscripts": [
+      "Genesis 40:1-41:15 (partial Aleppo damage) - Leningrad used as primary",
+      "Genesis 10:12-15 (Qumran fragmentary) - excluded from fragment analysis"
+    ],
+    "methodological": [
+      "Markers with less than 90% manuscript agreement flagged for sensitivity analysis",
+      "Verse numbering follows Masoretic tradition (not LXX or Samaritan variants)"
+    ]
+  }
+}

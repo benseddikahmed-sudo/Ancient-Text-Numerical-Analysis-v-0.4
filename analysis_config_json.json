@@ -1,0 +1,354 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "date": "2025-10-28",
+    "author": "Ahmed Benseddik",
+    "doi": "10.5281/zenodo.17443361",
+    "orcid": "0009-0005-6308-8171",
+    "description": "Configuration file for Genesis numerical pattern analysis - pre-registered parameters",
+    "pre_registration_date": "2024-09-15",
+    "analysis_start_date": "2024-10-01",
+    "analysis_end_date": "2025-03-15"
+  },
+  "corpus_specification": {
+    "primary_text": {
+      "name": "Westminster Leningrad Codex (WLC)",
+      "manuscript": "Leningrad Codex B19A",
+      "date": "1008 CE",
+      "source_url": "https://tanach.us/Tanach.xml",
+      "license": "Public Domain / CC-BY-4.0",
+      "encoding": "UTF-8",
+      "text_format": "XML with morphological tagging"
+    },
+    "scope": {
+      "book": "Genesis (Bereshit)",
+      "chapters": "1-50",
+      "total_verses": 1533,
+      "total_words": 20614,
+      "total_characters": 78064
+    },
+    "comparison_manuscripts": [
+      {
+        "name": "Qumran Fragments",
+        "identifiers": ["4QGena", "4QGenb", "4QGenc", "4QGend", "4QGene", "4QGenf", "4QGeng", "4QGenh-para", "4QGenj", "4QGenk"],
+        "date_range": "250 BCE - 50 CE",
+        "completeness": "~15%",
+        "source": "Dead Sea Scrolls Electronic Library"
+      },
+      {
+        "name": "Aleppo Codex",
+        "date": "~930 CE",
+        "completeness": "~95% (Genesis fully preserved)",
+        "source": "Digital Aleppo Codex Project",
+        "url": "http://www.aleppocodex.org/"
+      }
+    ]
+  },
+  "statistical_parameters": {
+    "permutation_tests": {
+      "n_iterations": 50000,
+      "seed": 42,
+      "method": "exhaustive_shuffle",
+      "null_model": "uniform_random_distribution",
+      "tail": "upper",
+      "preserve_constraints": [
+        "token_frequencies",
+        "text_length",
+        "vocabulary_size"
+      ]
+    },
+    "bayesian_analysis": {
+      "method": "beta_binomial_model",
+      "prior_structured": {
+        "distribution": "Beta",
+        "alpha": 5.0,
+        "beta": 2.0,
+        "justification": "Weakly informative prior favoring structured placement"
+      },
+      "prior_null": {
+        "distribution": "point_mass",
+        "parameter": "empirical_base_rate"
+      },
+      "bayes_factor_thresholds": {
+        "weak": 3,
+        "moderate": 10,
+        "strong": 30,
+        "very_strong": 100
+      }
+    },
+    "bootstrap_resampling": {
+      "n_bootstrap": 10000,
+      "seed": 123,
+      "confidence_level": 0.95,
+      "method": "percentile"
+    },
+    "multiple_comparison_correction": {
+      "method": "benjamini_hochberg",
+      "fdr_level": 0.05,
+      "independent_tests": 15,
+      "correction_applied": true
+    },
+    "effect_size": {
+      "measure": "cohens_d",
+      "thresholds": {
+        "small": 0.2,
+        "medium": 0.5,
+        "large": 0.8,
+        "very_large": 2.0
+      }
+    }
+  },
+  "structural_markers_definition": {
+    "pre_registered": true,
+    "date_locked": "2024-09-15",
+    "marker_types": {
+      "chapter_boundaries": {
+        "count": 15,
+        "criterion": "Major narrative transitions and book divisions"
+      },
+      "toledot_formulas": {
+        "count": 10,
+        "criterion": "Occurrences of תולדות formula",
+        "hebrew_pattern": "אלה תולדות"
+      },
+      "covenant_passages": {
+        "count": 8,
+        "criterion": "Explicit covenant establishment or renewal passages"
+      },
+      "narrative_transitions": {
+        "count": 10,
+        "criterion": "Major plot shifts and generational changes"
+      }
+    },
+    "total_markers": 43,
+    "overlap_handling": "Non-overlapping - each verse assigned to one marker type maximum",
+    "verification": "Independent verification by two philologists"
+  },
+  "target_lexemes": {
+    "pre_registered": true,
+    "date_locked": "2024-09-15",
+    "selection_criteria": [
+      "Semantic significance (key theological or narrative terms)",
+      "Sufficient frequency (minimum 5 occurrences in Genesis)",
+      "Morphological stability across manuscripts",
+      "Not selected based on spatial distribution (anti-p-hacking)"
+    ],
+    "primary_targets": [
+      {
+        "hebrew": "תולדות",
+        "transliteration": "toledot",
+        "translation": "generations",
+        "reason": "Major structural marker in Genesis"
+      },
+      {
+        "hebrew": "התבה",
+        "transliteration": "ha-tebah",
+        "translation": "the ark",
+        "reason": "Semantically rich term, Noah narrative centrality"
+      },
+      {
+        "hebrew": "ברית",
+        "transliteration": "berit",
+        "translation": "covenant",
+        "reason": "Theological centrality in patriarchal narratives"
+      }
+    ],
+    "numeric_patterns": [
+      {
+        "value": 1260,
+        "type": "intertextual_sum",
+        "biblical_parallels": ["Daniel 12:7", "Revelation 11:3", "Revelation 12:6"]
+      },
+      {
+        "value": 1290,
+        "type": "intertextual_sum",
+        "biblical_parallels": ["Daniel 12:11"]
+      },
+      {
+        "value": 1335,
+        "type": "intertextual_sum",
+        "biblical_parallels": ["Daniel 12:12"]
+      }
+    ]
+  },
+  "gematria_system": {
+    "method": "mispar_hechrachi",
+    "description": "Standard Hebrew gematria (absolute/normative values)",
+    "letter_values": "See gematria_map.csv for complete mapping",
+    "final_letters": "Use standard values (not extended 500-900)",
+    "calculation": "Sum of all letter values in word",
+    "validation": "Cross-checked with traditional Jewish sources"
+  },
+  "exclusion_criteria": {
+    "textual_variants": {
+      "threshold": "Verses with major variants (>3 letter differences) between Qumran/Aleppo/Leningrad excluded from diachronic analysis",
+      "specific_exclusions": [
+        "Genesis 40:1-15 (partial Aleppo damage)",
+        "Genesis 10:12-15 (Qumran fragmentary)"
+      ]
+    },
+    "methodological": {
+      "minimum_marker_agreement": 0.90,
+      "minimum_manuscript_support": "At least 2 of 3 manuscript traditions",
+      "verse_numbering": "Masoretic tradition (not LXX or Samaritan variants)"
+    }
+  },
+  "expert_panel_protocol": {
+    "methodology": "Modified Delphi protocol",
+    "n_experts": 12,
+    "composition": {
+      "biblical_philologists": 4,
+      "statisticians": 3,
+      "ancient_near_eastern_historians": 3,
+      "textual_critics": 2
+    },
+    "selection_criteria": [
+      "PhD in relevant field",
+      "Minimum 5 peer-reviewed publications",
+      "No prior knowledge of specific hypotheses (blind evaluation)",
+      "Diverse institutional affiliations"
+    ],
+    "rounds": {
+      "round_1": {
+        "description": "Individual assessment without statistical results",
+        "materials": ["Pattern description", "Textual context", "Manuscript evidence"],
+        "scoring_scale": "0-10 (meaningfulness likelihood)"
+      },
+      "round_2": {
+        "description": "Re-evaluation with statistical disclosure",
+        "materials": ["Round 1 + statistical results", "Anonymous Round 1 scores"],
+        "opportunity": "Revise scores based on statistical evidence"
+      },
+      "round_3": {
+        "description": "Consensus discussion",
+        "method": "Facilitated discussion of outlier opinions",
+        "outcome": "Final consensus scores"
+      }
+    },
+    "scoring_rubric": {
+      "historical_plausibility": "0-3 points",
+      "textual_coherence": "0-3 points",
+      "manuscript_stability": "0-2 points",
+      "statistical_strength": "0-2 points",
+      "total_maximum": 10
+    }
+  },
+  "sensitivity_analyses": {
+    "required_tests": [
+      {
+        "name": "alternative_marker_definitions",
+        "description": "Test with conservative (36 markers) and expansive (57 markers) sets",
+        "expectation": "Pattern should remain significant"
+      },
+      {
+        "name": "subsampling",
+        "description": "Exclude primary context (e.g., Genesis 6-9 for ark)",
+        "expectation": "Pattern should weaken or disappear (confirms specificity)"
+      },
+      {
+        "name": "random_seed_variation",
+        "description": "Run permutation tests with 10 different random seeds",
+        "expectation": "P-values should remain stable within ±0.005"
+      },
+      {
+        "name": "semantic_variants",
+        "description": "Include morphological variants and synonyms",
+        "expectation": "Pattern should strengthen or remain stable"
+      }
+    ]
+  },
+  "quality_control": {
+    "data_entry": {
+      "method": "Double-entry verification",
+      "verifiers": 2,
+      "error_correction": "Consensus resolution with third arbiter"
+    },
+    "code_review": {
+      "peer_review": true,
+      "n_reviewers": 2,
+      "review_focus": ["Algorithm correctness", "Statistical validity", "Reproducibility"]
+    },
+    "computational_verification": {
+      "method": "Independent re-implementation in R",
+      "tolerance": "Results must agree within 0.001 for p-values",
+      "status": "Completed - full agreement achieved"
+    }
+  },
+  "output_specifications": {
+    "results_files": [
+      "permutation_test_results.csv",
+      "bayesian_analysis_results.csv",
+      "expert_panel_scores.csv",
+      "diachronic_stability_matrix.csv",
+      "sensitivity_analysis_summary.csv"
+    ],
+    "visualizations": [
+      "null_distributions.png",
+      "bayes_factors_comparison.png",
+      "expert_consensus_timeline.png",
+      "diachronic_heatmap.png"
+    ],
+    "reports": [
+      "main_analysis_report.pdf",
+      "technical_appendix.pdf",
+      "supplementary_materials.pdf"
+    ]
+  },
+  "timeline": {
+    "pre_registration": "2024-09-15",
+    "data_collection": "2024-10-01 to 2024-11-30",
+    "statistical_analysis": "2024-12-01 to 2025-01-31",
+    "expert_panel_rounds": "2025-02-01 to 2025-02-28",
+    "manuscript_preparation": "2025-03-01 to 2025-03-15",
+    "submission": "2025-03-20"
+  },
+  "ethical_considerations": {
+    "data_usage": "All texts are public domain or open access",
+    "expert_anonymity": "Expert identities anonymized in Round 1-2 scoring",
+    "conflicts_of_interest": "No financial conflicts; intellectual conflicts disclosed",
+    "reproducibility_commitment": "Full data and code release upon publication"
+  },
+  "repository_structure": {
+    "data": [
+      "genesis_leningrad.txt",
+      "structural_markers.json",
+      "target_terms.yaml",
+      "gematria_map.csv",
+      "key_patterns.json"
+    ],
+    "src": [
+      "permutation_tests.py",
+      "bayesian_analysis.py",
+      "gematria_calculator.py",
+      "diachronic_validation.py",
+      "expert_panel_analysis.py",
+      "fdr_correction.py",
+      "visualization_tools.py"
+    ],
+    "notebooks": [
+      "01_exploratory_analysis.ipynb",
+      "02_permutation_tests.ipynb",
+      "03_bayesian_validation.ipynb",
+      "04_diachronic_checks.ipynb",
+      "05_expert_panel_analysis.ipynb",
+      "06_sensitivity_analyses.ipynb"
+    ],
+    "results": [
+      "permutation_outputs.csv",
+      "bayes_factors.csv",
+      "expert_scores.csv",
+      "diachronic_matrix.csv",
+      "figures/"
+    ],
+    "docs": [
+      "README.md",
+      "METHODOLOGY.md",
+      "CHANGELOG.md",
+      "LICENSE"
+    ]
+  },
+  "citation": {
+    "bibtex": "@article{benseddik2025genesis,\n  title={A Computational Framework for Detecting Numerical Patterns in Ancient Texts: Methods and Case Study—Genesis (Sefer Bereshit)},\n  author={Benseddik, Ahmed},\n  journal={Digital Scholarship in the Humanities},\n  year={2025},\n  doi={10.5281/zenodo.17443361}\n}",
+    "apa": "Benseddik, A. (2025). A Computational Framework for Detecting Numerical Patterns in Ancient Texts: Methods and Case Study—Genesis (Sefer Bereshit). Digital Scholarship in the Humanities. https://doi.org/10.5281/zenodo.17443361"
+  }
+}
