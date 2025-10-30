@@ -12,7 +12,7 @@ Author: Ahmed Benseddik <benseddik.ahmed@gmail.com>
 Version: 4.0-DSH
 Date: 2025-10-26
 License: MIT
-DOI: [To be assigned]
+DOI: https://doi.org/10.5281/zenodo.17487211
 
 Citation:
     Benseddik, A. (2025). Ancient Text Numerical Analysis: A Statistical
