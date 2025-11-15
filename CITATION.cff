@@ -1,17 +1,57 @@
+# Copier ce contenu exact dans CITATION.cff
+
 cff-version: 1.2.0
 message: "If you use this software, please cite it as below."
-title: "Ancient-Text-Numerical-Analysis"
-version: "0.4"
+type: software
 authors:
-  - family-names: "Benseddik"
-    given-names: "Ahmed"
-    alias: "Tsofé"
-doi: "10.5281/zenodo.pending"
-date-released: "2025-11-14"
-repository-code: "https://github.com/benseddikahmed-sudo/Ancient-Text-Numerical-Analysis-v0.4"
+  - family-names: Benseddik
+    given-names: Ahmed
+    orcid: "https://orcid.org/0009-0005-6308-8171"
+    affiliation: "Independent Digital Humanities Researcher, France"
+title: "Ancient Text Numerical Analysis Framework"
+version: 4.5-DSH
+doi: [VOTRE-ZENODO-DOI]  # Format: 10.5281/zenodo.XXXXX
+date-released: 2025-10-29
+url: "https://github.com/benseddikahmed-sudo/Ancient-Text-Numerical-Analysis-v-0.4"
+repository-code: "https://github.com/benseddikahmed-sudo/Ancient-Text-Numerical-Analysis-v-0.4"
 keywords:
-  - digital humanities
-  - ancient texts
-  - numerical analysis
-  - Bayesian methods
+  - digital-humanities
   - gematria
+  - biblical-studies
+  - computational-methods
+  - bayesian-analysis
+  - numerical-patterns
+  - ancient-texts
+  - statistical-validation
+  - reproducible-research
+license: MIT
+abstract: >-
+  A rigorous, reproducible framework for computational analysis of numerical 
+  patterns in ancient texts using multiple cultural systems (Hebrew, Greek, 
+  Arabic) with comprehensive statistical validation, Bayesian inference, and 
+  ethical considerations. The framework implements a three-phase validation 
+  protocol combining unsupervised discovery, multi-method statistical testing, 
+  and structured expert consensus.
+references:
+  - type: registry
+    title: "Pre-registration of Ancient Text Numerical Analysis Framework v4.5"
+    authors:
+      - family-names: Benseddik
+        given-names: Ahmed
+    date-released: 2025-11-13
+    doi: [VOTRE-OSF-DOI]  # Format: 10.17605/OSF.IO/XXXXX
+    repository: "https://osf.io/[OSF-ID]/"
+preferred-citation:
+  type: article
+  authors:
+    - family-names: Benseddik
+      given-names: Ahmed
+      orcid: "https://orcid.org/0009-0005-6308-8171"
+  title: >-
+    A Three-Phase Computational Framework for Detecting Numerical Patterns 
+    in Ancient Texts: Statistical Validation, Bayesian Inference, and 
+    Expert Consensus
+  journal: "Digital Scholarship in the Humanities"
+  year: 2025
+  # DOI à compléter après publication:
+  # doi: 10.1093/llc/fqXXXXXX
