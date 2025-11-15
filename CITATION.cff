@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "Ancient-Text-Numerical-Analysis"
+version: "0.4"
+authors:
+  - family-names: "Benseddik"
+    given-names: "Ahmed"
+    alias: "Tsofé"
+doi: "10.5281/zenodo.pending"
+date-released: "2025-11-14"
+repository-code: "https://github.com/benseddikahmed-sudo/Ancient-Text-Numerical-Analysis-v0.4"
+keywords:
+  - digital humanities
+  - ancient texts
+  - numerical analysis
+  - Bayesian methods
+  - gematria
