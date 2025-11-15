@@ -8,7 +8,7 @@ authors:
     affiliation: "Independent Digital Humanities Researcher, France"
 title: "Ancient Text Numerical Analysis Framework"
 version: 4.5-DSH
-doi: [ZENODO-DOI-TO-BE-ADDED]
+doi: https://doi.org/10.5281/zenodo.17592714
 date-released: 2025-10-29
 url: "https://github.com/benseddikahmed-sudo/Ancient-Text-Numerical-Analysis-v-0.4"
 repository-code: "https://github.com/benseddikahmed-sudo/Ancient-Text-Numerical-Analysis-v-0.4"
@@ -58,20 +58,7 @@ preferred-citation:
   journal: "Digital Scholarship in the Humanities"
   year: 2025
   # DOI to be added after publication:
-  # doi: 10.1093/llc/fqXXXXXX
+  # doi:https://doi.org/10.5281/zenodo.17592714 
 ```
 
-## ⚠️ Important
 
-**N'oubliez pas** de remplacer `[ZENODO-DOI-TO-BE-ADDED]` par votre vrai DOI Zenodo après l'avoir créé (lors de l'Action 5 dans le guide).
-
-## 🎯 Résumé
-```
-Racine du repository = Dossier principal qui contient README.md
-
-CITATION.cff doit être au même endroit que README.md
-
-Chemin complet :
-Ancient-Text-Numerical-Analysis-v-0.4/CITATION.cff
-                                      ↑
-                                  Racine
