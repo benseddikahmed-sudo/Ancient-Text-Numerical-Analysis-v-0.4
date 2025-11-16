@@ -1,12 +1,12 @@
-[complete_readme.md](https://github.com/user-attachments/files/23569897/complete_readme.md)
+[complete_readme (1).md](https://github.com/user-attachments/files/23570005/complete_readme.1.md)
 # 📊 Ancient Text Numerical Analysis Framework v4.5
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
 [![Code Coverage](https://img.shields.io/badge/coverage-87%25-brightgreen.svg)](tests/)
 [![DSH Submission](https://img.shields.io/badge/status-DSH%20submission-orange.svg)](https://academic.oup.com/dsh)
-[![DOI](https://img.shields.io/badge/DOI-pending-lightgrey.svg)](https://zenodo.org)
-[![Documentation](https://img.shields.io/badge/docs-sphinx-blue.svg)](https://benseddikahmed-sudo.github.io/Ancient-Text-Numerical-Analysis-v-0.4/)
+[![DOI](https://img.shields.io/badge/DOI-10.5281/zenodo.pending-lightgrey.svg)](https://zenodo.org)
+[![Documentation](https://img.shields.io/badge/docs-sphinx-blue.svg)](https://benseddikahmed-sudo.github.io/Ancient-Text-Numerical-Analysis-v4.5/)
 
 **A rigorous computational framework for detecting and validating numerical patterns in ancient texts with discovery-validation separation, Bayesian model comparison, and cross-cultural validation protocols. Includes reproducible implementation and proof-of-concept applications.**
 
@@ -60,7 +60,7 @@ graph TD
     B --> C[Phase 3: Expert Consensus]
     C --> D[Phase 4: Diachronic Validation]
     
-    A -->|Candidates k>2σ| B
+    A -->|Candidates k ≥ 2σ| B
     B -->|p<0.01, BF>10| C
     C -->|Score ≥7.0| D
     D -->|Stability ≥90%| E[Validated Patterns]
@@ -99,14 +99,14 @@ graph TD
 - Co-occurrence detection (term proximity analysis)
 - Positional clustering (structural marker association)
 
-**Output**: Candidate patterns exceeding k=2 standard deviations  
+**Output**: Candidate patterns exceeding 2σ (two standard deviations)  
 **Critical**: NO hypothesis testing to avoid data mining
 
 #### 🟢 Phase 2: Multi-Method Statistical Validation
 **Goal**: Independent validation with multiple statistical methods  
 **Methods**:
 - **Permutation tests**: 10,000-50,000 iterations, exact p-values
-- **Bayesian analysis**: Bayes Factors with Beta priors (BF > 10 threshold)
+- **Bayesian analysis**: Bayes Factor threshold BF ≥ 10 (strong evidence)
 - **Bootstrap CI**: 10,000 resamples, 95% confidence intervals
 - **FDR correction**: Benjamini-Hochberg at q=0.05
 - **Effect sizes**: Cohen's d, h with interpretation guidelines
@@ -139,8 +139,10 @@ graph TD
 - Aleppo Codex (10th century CE)
 - Leningrad Codex (1008 CE, Westminster Leningrad digital edition)
 
+**Stability Metric**: Proportion of identical occurrences across all manuscript witnesses after normalizing for plene/defective spelling variants. Calculated as: (matching instances / total instances) × 100%.
+
 **Output**: Stability ≥ 90%  
-**Critical**: 1100 years of TEXTUAL TRANSMISSION verified
+**Critical**: 1,100 years of textual transmission verified
 
 ### Combined Validation Criteria
 
@@ -202,7 +204,7 @@ Five patterns passed all validation criteria:
 
 #### 2. התבה (Ha-Tebah, "The Ark")
 - **Occurrences**: 17 times in Genesis
-- **Clustering**: At narrative markers (p<0.01, Cohen's d=4.19)
+- **Clustering**: At narrative markers (p=0.010, Cohen's d=4.19)
 - **Context**: Specific to Noah narrative (Genesis 6-9)
 - **Robustness**: Pattern remains significant when analyzed within Noah narrative alone (p=0.023)
 
@@ -232,8 +234,8 @@ Five patterns passed all validation criteria:
 
 ```bash
 # Clone the repository
-git clone https://github.com/benseddikahmed-sudo/Ancient-Text-Numerical-Analysis-v-0.4.git
-cd Ancient-Text-Numerical-Analysis-v-0.4
+git clone https://github.com/benseddikahmed-sudo/Ancient-Text-Numerical-Analysis-v4.5.git
+cd Ancient-Text-Numerical-Analysis-v4.5
 
 # Create virtual environment (recommended)
 python -m venv venv
@@ -249,14 +251,16 @@ pip install -r requirements.txt
 numpy>=1.24.0           # Numerical computing
 scipy>=1.10.0           # Scientific computing
 pandas>=2.0.0           # Data manipulation
-matplotlib>=3.7.0       # Plotting
-seaborn>=0.12.0         # Statistical visualization
+matplotlib>=3.7.0       # Plotting (publication figures)
+seaborn>=0.12.0         # Statistical visualization (exploratory only)
 statsmodels>=0.14.0     # Statistical models
 jupyter>=1.0.0          # Interactive notebooks
 pytest>=7.0.0           # Testing framework
 pymc>=5.0.0             # Bayesian inference (optional)
 arviz>=0.15.0           # Bayesian diagnostics (optional)
 ```
+
+**Note on Seaborn**: Seaborn is used only for exploratory analysis in interactive notebooks. All publication-quality figures in `results/figures/` are generated with matplotlib only to ensure complete reproducibility.
 
 ### Minimal Installation (without Bayesian)
 
@@ -355,7 +359,7 @@ print(f"Bayes Factor: {bf:.1f}")
 **Expected Output**:
 
 ```
-P-value: 0.00974
+P-value: 0.010
 Observed count: 17
 Expected (null): 8.24
 Cohen's d: 4.19
@@ -382,7 +386,7 @@ Start with:
 ## 📁 Repository Structure
 
 ```
-Ancient-Text-Numerical-Analysis-v-0.4/
+Ancient-Text-Numerical-Analysis-v4.5/
 ├── README.md                          # This file
 ├── LICENSE                            # MIT License
 ├── CHANGELOG.md                       # Version history
@@ -584,7 +588,7 @@ If you use this framework in your research, please cite:
   year         = 2025,
   publisher    = {GitHub},
   version      = {4.5-DSH},
-  url          = {https://github.com/benseddikahmed-sudo/Ancient-Text-Numerical-Analysis-v-0.4},
+  url          = {https://github.com/benseddikahmed-sudo/Ancient-Text-Numerical-Analysis-v4.5},
   doi          = {10.5281/zenodo.XXXXXXX},
   note         = {Submitted to Digital Scholarship in the Humanities}
 }
@@ -592,11 +596,11 @@ If you use this framework in your research, please cite:
 
 ### APA Style
 
-Benseddik, A. (2025). *Ancient Text Numerical Analysis: A Computational Framework for Rigorous Pattern Detection* (Version 4.5-DSH) [Computer software]. https://github.com/benseddikahmed-sudo/Ancient-Text-Numerical-Analysis-v-0.4
+Benseddik, A. (2025). *Ancient Text Numerical Analysis: A Computational Framework for Rigorous Pattern Detection* (Version 4.5-DSH) [Computer software]. https://github.com/benseddikahmed-sudo/Ancient-Text-Numerical-Analysis-v4.5
 
 ### MLA Style
 
-Benseddik, Ahmed. *Ancient Text Numerical Analysis: A Computational Framework for Rigorous Pattern Detection*. Version 4.5-DSH, 2025. GitHub, https://github.com/benseddikahmed-sudo/Ancient-Text-Numerical-Analysis-v-0.4.
+Benseddik, Ahmed. *Ancient Text Numerical Analysis: A Computational Framework for Rigorous Pattern Detection*. Version 4.5-DSH, 2025. GitHub, https://github.com/benseddikahmed-sudo/Ancient-Text-Numerical-Analysis-v4.5.
 
 ---
 
@@ -617,7 +621,7 @@ We welcome contributions from the community! Please see [CONTRIBUTING.md](CONTRI
 
 ```bash
 # Fork and clone your fork
-git clone https://github.com/YOUR-USERNAME/Ancient-Text-Numerical-Analysis-v-0.4.git
+git clone https://github.com/YOUR-USERNAME/Ancient-Text-Numerical-Analysis-v4.5.git
 
 # Create development branch
 git checkout -b feature/your-feature-name
@@ -656,12 +660,12 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 [Your Institution/Affiliation]  
 📧 Email: [your-email]  
 🔗 GitHub: [@benseddikahmed-sudo](https://github.com/benseddikahmed-sudo)  
-🌐 ORCID: [if available]
+🌐 ORCID: [0009-0005-6308-8171](https://orcid.org/0009-0005-6308-8171)
 
 ### Support
 
-- **Issues**: [GitHub Issues](https://github.com/benseddikahmed-sudo/Ancient-Text-Numerical-Analysis-v-0.4/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/benseddikahmed-sudo/Ancient-Text-Numerical-Analysis-v-0.4/discussions)
+- **Issues**: [GitHub Issues](https://github.com/benseddikahmed-sudo/Ancient-Text-Numerical-Analysis-v4.5/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/benseddikahmed-sudo/Ancient-Text-Numerical-Analysis-v4.5/discussions)
 - **Email**: For private inquiries
 
 ---
@@ -992,7 +996,7 @@ python ancient_text_dsh.py --no-bayesian
 **Issue**: `FileNotFoundError: data/genesis_leningrad.txt`  
 **Solution**: Ensure you're running from project root:
 ```bash
-cd Ancient-Text-Numerical-Analysis-v-0.4
+cd Ancient-Text-Numerical-Analysis-v4.5
 python ancient_text_dsh.py
 ```
 
@@ -1056,7 +1060,8 @@ pytest tests/ -W ignore::DeprecationWarning
 
 ```bash
 # Installation
-git clone [repo_url] && cd Ancient-Text-Numerical-Analysis-v-0.4
+git clone https://github.com/benseddikahmed-sudo/Ancient-Text-Numerical-Analysis-v4.5.git
+cd Ancient-Text-Numerical-Analysis-v4.5
 pip install -r requirements.txt
 
 # Quick test
@@ -1208,11 +1213,11 @@ To everyone who made this project possible:
 
 **⭐ Star this repository if you find it useful!**
 
-[![GitHub stars](https://img.shields.io/github/stars/benseddikahmed-sudo/Ancient-Text-Numerical-Analysis-v-0.4?style=social)](https://github.com/benseddikahmed-sudo/Ancient-Text-Numerical-Analysis-v-0.4/stargazers)
+[![GitHub stars](https://img.shields.io/github/stars/benseddikahmed-sudo/Ancient-Text-Numerical-Analysis-v4.5?style=social)](https://github.com/benseddikahmed-sudo/Ancient-Text-Numerical-Analysis-v4.5/stargazers)
 
-[Report Bug](https://github.com/benseddikahmed-sudo/Ancient-Text-Numerical-Analysis-v-0.4/issues) · 
-[Request Feature](https://github.com/benseddikahmed-sudo/Ancient-Text-Numerical-Analysis-v-0.4/issues) · 
-[Documentation](https://benseddikahmed-sudo.github.io/Ancient-Text-Numerical-Analysis-v-0.4/)
+[Report Bug](https://github.com/benseddikahmed-sudo/Ancient-Text-Numerical-Analysis-v4.5/issues) · 
+[Request Feature](https://github.com/benseddikahmed-sudo/Ancient-Text-Numerical-Analysis-v4.5/issues) · 
+[Documentation](https://benseddikahmed-sudo.github.io/Ancient-Text-Numerical-Analysis-v4.5/)
 
 ---
 
