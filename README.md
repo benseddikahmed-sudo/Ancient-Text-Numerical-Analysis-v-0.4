@@ -1,18 +1,17 @@
-[readme_en_dsh.md(1).md](https://github.com/user-attachments/files/23503661/readme_en_dsh.md.1.md)
-# 📊 Computational Analysis of Numerical Patterns in Ancient Texts
+[README_COMPLETE_FINAL.md](https://github.com/user-attachments/files/23569837/README_COMPLETE_FINAL.md)
+# Ancient Text Numerical Analysis Framework v4.5
 
-[![DOI]((https://zenodo.org/badge/DOI/10.5281/zenodo.17591679.svg)](https://doi.org/10.5281/zenodo.17591679))]
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![DOI OSF](https://img.shields.io/badge/OSF-10.17605%2FOSF.IO%2FGXQH6-blue.svg)](https://doi.org/10.17605/OSF.IO/GXQH6)
+[![DOI Zenodo](https://zenodo.org/badge/DOI/[ZENODO-DOI].svg)](https://doi.org/[ZENODO-DOI])
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
-[![Code Coverage](https://img.shields.io/badge/coverage-87%25-brightgreen.svg)](tests/)
-[![DSH Submission](https://img.shields.io/badge/status-under%20review-orange.svg)](https://academic.oup.com/dsh)
 
-A rigorous, reproducible computational framework for detecting and validating numerical patterns in ancient texts using multiple cultural systems (Hebrew, Greek, Arabic) with comprehensive statistical validation, Bayesian inference, and ethical considerations.
+> **A rigorous, reproducible framework for computational analysis of numerical patterns in ancient texts**
 
-**Publication Status**: Submitted to *Digital Scholarship in the Humanities* (DSH)  
-**Author**: Ahmed Benseddik  
-**Version**: 4.5-DSH  
-**Date**: November 2025
+**Publication:** Submitted to *Digital Scholarship in the Humanities* (DSH) — November 2025  
+**Author:** Ahmed Benseddik ([ORCID: 0009-0005-6308-8171](https://orcid.org/0009-0005-6308-8171))  
+**Version:** 4.5-DSH  
+**Pre-registration:** [OSF DOI: 10.17605/OSF.IO/GXQH6](https://doi.org/10.17605/OSF.IO/GXQH6)
 
 ---
 
@@ -20,15 +19,11 @@ A rigorous, reproducible computational framework for detecting and validating nu
 
 - [Overview](#-overview)
 - [Key Features](#-key-features)
+- [Methodology](#-methodology)
 - [Case Study: Genesis](#-case-study-genesis)
 - [Installation](#-installation)
 - [Quick Start](#-quick-start)
-- [Repository Structure](#-repository-structure)
-- [Methodology](#-methodology)
-- [Usage Examples](#-usage-examples)
-- [Analysis Pipeline](#-analysis-pipeline)
-- [Interpreting Results](#-interpreting-results)
-- [Testing](#-testing)
+- [Validation Results](#-validation-results)
 - [Documentation](#-documentation)
 - [Reproducibility](#-reproducibility)
 - [Citation](#-citation)
@@ -38,124 +33,162 @@ A rigorous, reproducible computational framework for detecting and validating nu
 
 ---
 
-## 🎯 Overview
+## 🔬 Overview
 
-This repository contains the complete implementation of a three-phase computational framework for detecting numerical patterns in ancient texts, with comprehensive case studies of Genesis (Sefer Bereshit) and support for multiple cultural numerical systems. The framework is designed for digital humanities scholarship with rigorous methodological standards.
+This repository contains the complete implementation of a **three-phase computational framework** for detecting and validating numerical patterns in ancient texts. The framework addresses a critical methodological challenge in digital humanities: **how to rigorously validate numerical pattern claims while preventing confirmation bias and p-hacking**.
 
-### Framework Architecture
+### The Problem
 
-```mermaid
-graph TD
-    A[Ancient Text] --> B[Phase 1: Discovery]
-    B --> C[Frequency Analysis]
-    B --> D[Gematria Calculation]
-    B --> E[Positional Clustering]
-    
-    C --> F[Phase 2: Statistical Validation]
-    D --> F
-    E --> F
-    
-    F --> G[Permutation Tests]
-    F --> H[Bayesian Analysis]
-    F --> I[Bootstrap CI]
-    F --> J[FDR Correction]
-    
-    G --> K[Phase 3: Expert Consensus]
-    H --> K
-    I --> K
-    J --> K
-    
-    K --> L[Diachronic Validation]
-    L --> M[Validated Patterns]
-    
-    style A fill:#e1f5ff
-    style M fill:#d4edda
-    style F fill:#fff3cd
-    style K fill:#f8d7da
-```
+Analysis of numerical patterns in sacred texts (gematria, isopsephy, abjad) has long been controversial, plagued by:
+- Selective reporting of positive results
+- Post-hoc rationalization
+- Lack of pre-registration
+- No independent validation
+- Insufficient statistical rigor
 
-The framework combines:
+### Our Solution
 
-1. **Unsupervised Discovery** — Pattern detection via frequency analysis, gematria, and permutation scans
-2. **Statistical Validation** — Multiple tests (permutation, Bayesian, bootstrap) with FDR corrections
-3. **Expert Consensus** — Structured Delphi protocol with interdisciplinary panel
+A systematic framework integrating:
+
+1. **Unsupervised Discovery** — Pattern detection using pre-registered markers
+2. **Multi-Method Statistical Validation** — Convergent evidence from frequentist, Bayesian, and bootstrap methods
+3. **Structured Expert Consensus** — Modified Delphi protocol with interdisciplinary panel
+
+### Innovation
+
+This is the **first integrated framework** combining computational pattern discovery, rigorous statistical validation, AND qualitative expert assessment for ancient text analysis.
 
 ---
 
 ## ✨ Key Features
 
-### 🔬 Methodological Innovation
+### Methodological Rigor
+- ✅ **Pre-registered hypotheses** ([OSF: 10.17605/OSF.IO/GXQH6](https://doi.org/10.17605/OSF.IO/GXQH6)) before statistical testing
+- ✅ **Discovery-validation separation** to prevent circular reasoning
+- ✅ **Multiple testing corrections** (Bonferroni, Šidák, Benjamini-Hochberg FDR)
+- ✅ **Effect sizes** (Cohen's d, h) with confidence intervals
+- ✅ **Power analysis** to ensure adequate sample size
 
-✅ **First integrated framework** combining frequentist, Bayesian, and qualitative validation  
-✅ **Rigorous anti-p-hacking protocol** — Pre-registered markers and discovery-validation split  
-✅ **Multiple cultural systems** — Hebrew gematria (standard, Atbash, Albam), Greek isopsephy, Arabic abjad  
-✅ **Formal mathematical proofs** — 7 theorems with computational verification  
-✅ **Diachronic validation** — Manuscript stability across 1100 years (Qumran → Leningrad)  
-✅ **Complete reproducibility** — All code, data, and parameters publicly available
+### Statistical Methods
 
-### 📊 Statistical Methods
+**Frequentist Validation:**
+- Permutation tests (10,000-50,000 iterations) with exact p-values
+- Binomial tests with Wilson score confidence intervals
+- Bootstrap resampling (10,000 resamples, BCa method)
+- FDR correction at q=0.05
 
-#### Frequentist Validation
-- **Permutation tests**: 10,000-50,000 iterations with exact p-values
-- **Binomial tests**: Exact confidence intervals (Wilson score method)
-- **Multiple testing corrections**: Bonferroni, Šidák, Benjamini-Hochberg FDR
-- **Effect sizes**: Cohen's h, Cohen's d, standardized differences
-- **Bootstrap CI**: Percentile and BCa methods (10,000 resamples)
-- **Power analysis**: Sample size adequacy assessment (target power ≥ 0.80)
+**Bayesian Validation:**
+- Hierarchical Beta-Binomial models
+- MCMC sampling (PyMC, 4 chains, 5000+ draws)
+- Convergence diagnostics (R̂, effective sample size)
+- Model comparison (WAIC, LOO-CV, Bayes Factors)
+- Posterior predictive checks
 
-#### Bayesian Validation
-- **Hierarchical models**: Beta-Binomial conjugate priors
-- **MCMC sampling**: PyMC with 4 chains, 5000+ draws, Gelman-Rubin diagnostics
-- **Convergence diagnostics**: R̂, effective sample size, trace plots
-- **Model comparison**: WAIC, LOO-CV, Bayes Factors (BF)
-- **Posterior predictive checks**: Distribution validation
-- **HDI intervals**: Highest Density Intervals (95% credible intervals)
+**Expert Validation:**
+- Modified Delphi protocol (3 rounds)
+- Interdisciplinary panel (12 experts)
+- Structured scoring (0-10 scale, 4 criteria)
+- Consensus threshold (≥7.0, SD≤1.5)
 
-#### Non-Parametric Validation
-- **Distribution tests**: Shapiro-Wilk, Anderson-Darling, Kolmogorov-Smirnov
-- **Q-Q plots**: Quantile-quantile comparisons
-- **Permutation-based CI**: Distribution-free inference
+### Cross-Cultural Scope
+- **Hebrew:** Standard gematria, Atbash, Albam
+- **Greek:** Isopsephy
+- **Arabic:** Abjad
+- Statistical comparison across cultural systems
 
-### 🔄 Reproducibility Guarantees
+### Complete Reproducibility
+- ✅ Fixed random seeds (seed=42 for all stochastic procedures)
+- ✅ Deterministic outputs with comprehensive logging
+- ✅ Complete environment specification
+- ✅ Open source (MIT License)
+- ✅ Permanent archiving (Zenodo DOI)
 
-- ✅ **Complete environment capture**: Python version, dependencies, system info
-- ✅ **Git commit tracking**: Version control integration with tagged releases
-- ✅ **Deterministic seeds**: All random processes reproducible (seed=42)
-- ✅ **Comprehensive logging**: File + console outputs with timestamps
-- ✅ **Metadata tracking**: Every analysis run documented with provenance
-- ✅ **Pre-registration**: OSF registry for markers and parameters (locked record)
-- ✅ **Code verification**: Independent R implementation validates Python results
+### Diachronic Validation
+- Manuscript stability verification across 1,100 years
+- Qumran Dead Sea Scrolls → Leningrad Codex
+- Pattern preservation: 91-100% stability
 
-### 🌍 Multi-Cultural Numerical Systems
+---
 
-- **Hebrew Gematria**:
-  - Standard (Mispar Hechrachi): Traditional Hebrew letter values
-  - Atbash (letter reversal): א↔ת, ב↔ש, etc.
-  - Albam (letter substitution): א↔ל, ב↔מ, etc.
-- **Greek Isopsephy**: Classical Greek numerical values (α=1, β=2, ..., ω=800)
-- **Arabic Abjad**: Traditional Arabic numerals (أ=1, ب=2, ج=3, etc.)
-- **Cross-cultural correlation**: Statistical comparison across systems
+## 🧬 Methodology
 
-### 📈 Visualizations and Reporting
+### Phase 1: Unsupervised Discovery
 
-- 📊 **Publication-quality figures**: 300 DPI, vector formats (SVG, PDF)
-- 📈 **Distribution plots**: Histograms with density curves, Q-Q plots
-- 🎨 **Bayesian diagnostics**: Trace plots, posterior distributions, forest plots
-- 🔍 **Sensitivity analysis**: Robustness visualizations across parameter space
-- 🌐 **Cross-cultural heatmaps**: Correlation matrices for multi-system analysis
-- 📉 **Effect size plots**: Forest plots with confidence intervals
+**Goal:** Detect pattern candidates without hypothesis testing
 
-### 🔬 Ethical Considerations
+**Methods:**
+- Frequency analysis (lexical distribution)
+- Gematria calculation (multiple cultural systems)
+- Co-occurrence detection
+- Positional clustering at structural markers
 
-- 🔬 **Methodological transparency**: All assumptions documented and justified
-- 🌍 **Cultural sensitivity**: Guidelines for respectful interpretation of religious texts
-- ⚠️ **Interpretation caveats**: Limitations clearly stated in all outputs
-- 📝 **Acknowledgment of uncertainty**: Probabilistic statements only, no deterministic claims
-- 🤝 **Community engagement**: Open to scholarly feedback and collaborative development
+**Output:** Candidate patterns exceeding k=2 standard deviations
+
+**Critical:** No p-values computed in discovery phase (prevents p-hacking)
+
+---
+
+### Phase 2: Statistical Validation
+
+**Goal:** Multi-method convergent validation
+
+**Requirements for Validation:**
+- ✅ Permutation p-value < 0.01
+- ✅ Bayes Factor > 10 (strong evidence)
+- ✅ Large effect size (Cohen's d > 0.8)
+- ✅ Significant after FDR correction (q < 0.05)
+
+**Statistical Pipeline:**
+1. Permutation tests → Exact p-values
+2. Bayesian model comparison → Bayes Factors
+3. Bootstrap CI → Robustness assessment
+4. FDR correction → Control false discoveries
+5. Effect sizes → Magnitude of effects
+6. Power analysis → Sample adequacy
+
+---
+
+### Phase 3: Expert Consensus
+
+**Goal:** Qualitative validation by domain experts
+
+**Panel Composition:**
+- 4 Hebrew philologists
+- 3 statisticians
+- 3 historians
+- 2 textual critics
+
+**Protocol:**
+- **Round 1:** Blind assessment (no statistical results)
+- **Round 2:** Re-evaluation with statistical disclosure
+- **Round 3:** Consensus discussion
+
+**Scoring Criteria:**
+1. Historical plausibility (0-3 points)
+2. Textual coherence (0-3 points)
+3. Manuscript stability (0-2 points)
+4. Statistical strength (0-2 points)
+
+**Threshold:** Mean ≥ 7.0 with SD ≤ 1.5
+
+---
+
+### Combined Validation
+
+A pattern is **validated** if and only if **ALL** criteria are met:
+
+✅ Permutation p-value < 0.01  
+✅ Bayes Factor > 10  
+✅ Expert consensus ≥ 7.0  
+✅ Diachronic stability ≥ 90%  
+
+**Theorem:** Under the global null hypothesis, the framework controls family-wise error rate at α ≤ 0.05 (See [mathematical proofs](docs/mathematical_proofs.pdf))
 
 ---
 
 ## 📖 Case Study: Genesis
+
+We demonstrate the framework through comprehensive analysis of **Genesis (Sefer Bereshit)** from the Westminster Leningrad Codex.
 
 ### Validated Patterns
 
@@ -167,49 +200,50 @@ The framework combines:
 | **Sum 1290** | — | 2 instances | 0.019 | 12.4 | 8.1/10 | 100% |
 | **Sum 1335** | — | 2 instances | 0.015 | 14.9 | 7.5/10 | 100% |
 
-**All patterns significant after FDR correction (q < 0.05)**
+*All patterns remain significant after FDR correction (q < 0.05)*
 
-### Detailed Results
+### Pattern Details
 
-#### 1. תולדות (Toledot, "Generations")
-- **Gematria value**: 846 marks 10 structural divisions in Genesis
-- **Validation**: BF=18.7 (strong evidence), p<0.01, expert consensus 8.2/10
-- **Interpretation**: Well-known structural marker in biblical scholarship; gematria alignment reinforces architectural significance
-- **Biblical context**: Toledot formulas divide Genesis into literary units (Gen 2:4, 5:1, 6:9, 10:1, etc.)
+**1. Toledot Formula (תולדות)**
+- **Gematria value:** 846
+- **Structural role:** Marks 10 genealogical divisions in Genesis
+- **Validation:** BF=18.7 (strong evidence), p=0.007, Cohen's d=2.84
+- **Interpretation:** Well-known literary marker; numerical alignment reinforces structural significance
+- **Biblical context:** Gen 2:4, 5:1, 6:9, 10:1, 11:10, 11:27, 25:12, 25:19, 36:1, 37:2
 
-#### 2. התבה (Ha-Tebah, "The Ark")
-- **Occurrences**: 17 times in Genesis
-- **Clustering**: At narrative markers (p<0.01, Cohen's d=4.19)
-- **Context**: Specific to Noah narrative (Genesis 6-9)
-- **Robustness**: Pattern remains significant when analyzed within Noah narrative alone (p=0.023)
+**2. Ha-Tebah Lexeme (התבה, "The Ark")**
+- **Occurrences:** 17 times in Genesis
+- **Clustering:** At narrative transition markers (p=0.010, Cohen's d=4.19)
+- **Context:** Specific to Noah narrative (Gen 6-9)
+- **Robustness:** Pattern maintained within Noah narrative alone (p=0.023)
+- **Validation:** BF=21.6, expert consensus 8.3/10, 98% manuscript stability
 
-#### 3. Intertextual Sums (1260, 1290, 1335)
-- **Correlations**: With prophetic chronologies (Daniel 12, Revelation 11-12)
-- **Validation**: All BF > 12, expert consensus ≥ 7.5
-- **Manuscript stability**: 100% across witnesses (Aleppo, Leningrad)
-- **Significance**: Potential numerical intertextuality across biblical corpus
+**3. Intertextual Sums (1260, 1290, 1335)**
+- **Biblical context:** Correspond to prophetic chronologies in Daniel 12 and Revelation 11-12
+- **Validation:** All BF > 12, expert consensus ≥7.5
+- **Manuscript stability:** 100% across all witnesses (Qumran, Aleppo, Leningrad)
+- **Significance:** Potential numerical intertextuality across biblical corpus
 
-### Robustness Testing
+### Sensitivity Analysis
 
-✅ **Alternative markers**: Patterns robust across 3 marker definitions (p ≤ 0.02 in all)  
-✅ **Subsampling**: Ha-Tebah specific to Noah narrative (as expected; p=0.18 when excluded)  
-✅ **Random seed variation**: P-values stable within ±0.005 across 10 seeds  
-✅ **Manuscript variations**: 91-100% stability across Qumran, Aleppo, Leningrad codices
+✅ **Alternative marker definitions:** Patterns robust (p ≤ 0.02 in all)  
+✅ **Subsampling:** Ha-Tebah specific to Noah narrative (as expected)  
+✅ **Random seed variation:** P-values stable within ±0.005 across 10 seeds  
+✅ **Manuscript variations:** 91-100% stability across textual witnesses  
 
 ---
 
-## 🚀 Installation
+## 🛠️ Installation
 
-### Prerequisites
+### Requirements
 
-- **Python** 3.9 or higher
-- **Git** (for cloning repository)
-- **(Optional)** LaTeX distribution for compiling mathematical proofs
+- Python 3.9 or higher
+- Git (for cloning repository)
 
-### Standard Installation
+### Quick Install
 
 ```bash
-# Clone the repository
+# Clone repository
 git clone https://github.com/benseddikahmed-sudo/Ancient-Text-Numerical-Analysis-v-0.4.git
 cd Ancient-Text-Numerical-Analysis-v-0.4
 
@@ -221,553 +255,338 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-### Required Packages
+### Dependencies
 
-```txt
-numpy>=1.24.0           # Numerical computing
-scipy>=1.10.0           # Scientific computing
-pandas>=2.0.0           # Data manipulation
-matplotlib>=3.7.0       # Plotting
-seaborn>=0.12.0         # Statistical visualization
-statsmodels>=0.14.0     # Statistical models
-jupyter>=1.0.0          # Interactive notebooks
-pytest>=7.0.0           # Testing framework
-pymc>=5.0.0             # Bayesian inference (optional)
-arviz>=0.15.0           # Bayesian diagnostics (optional)
-numba>=0.57.0           # JIT compilation (optional)
+**Core (Required):**
+```
+numpy>=1.24.0
+scipy>=1.10.0
+pandas>=2.0.0
+matplotlib>=3.7.0
+seaborn>=0.12.0
+statsmodels>=0.14.0
 ```
 
-### Minimal Installation (without Bayesian)
+**Optional (Bayesian Analysis):**
+```
+pymc>=5.0.0
+arviz>=0.15.0
+numba>=0.57.0
+```
 
-If you only need frequentist methods:
-
+For frequentist-only analysis:
 ```bash
 pip install numpy scipy pandas matplotlib seaborn statsmodels
 ```
 
-### Verify Installation
+---
+
+## 🚀 Quick Start
+
+### Run Tests
 
 ```bash
-# Run test suite
-python -m pytest tests/ -v
+# Verify installation
+pytest tests/ -v
 
 # Run theorem demonstrations
 python src/theorem_demonstrations.py
-
-# Check environment
-python -c "import ancient_text_dsh; print(ancient_text_dsh.__version__)"
 ```
 
-**All tests should pass ✅**
+Expected output: All tests pass ✅
 
----
-
-## 🏃 Quick Start
-
-### Full Analysis
-
-```bash
-# Complete analysis with all features
-python ancient_text_dsh.py --data-dir ./data/genesis --output-dir ./results
-
-# Fast analysis (no Bayesian, fewer permutations)
-python ancient_text_dsh.py --no-bayesian --n-permutations 10000
-
-# High-quality analysis (publication-ready)
-python ancient_text_dsh.py --n-permutations 50000 --n-bayesian-draws 5000 --dpi 300
-```
-
-### Python Example
-
-```python
-from src.permutation_tests import permutation_test
-from src.bayesian_analysis import bayes_factor_binomial
-import json
-
-# Load configuration
-with open('data/analysis_config.json', 'r') as f:
-    config = json.load(f)
-
-# Load markers
-with open('data/structural_markers.json', 'r') as f:
-    markers = json.load(f)
-
-# Run permutation test for Ha-Tebah
-result = permutation_test(
-    corpus='data/genesis_leningrad.txt',
-    target_term='התבה',
-    markers=markers['chapter_boundaries'],
-    n_iterations=50000,
-    seed=42
-)
-
-print(f"P-value: {result['p_value']:.5f}")
-print(f"Observed count: {result['observed_count']}")
-print(f"Expected (null): {result['null_mean']:.2f}")
-print(f"Cohen's d: {result['cohens_d']:.2f}")
-
-# Bayes Factor
-bf = bayes_factor_binomial(
-    observed_count=17,
-    n_markers=43,
-    corpus_length=20614,
-    total_occurrences=17,
-    alpha_prior=5.0,
-    beta_prior=2.0
-)
-
-print(f"Bayes Factor: {bf:.1f}")
-```
-
-**Expected Output**:
-```
-P-value: 0.00974
-Observed count: 17
-Expected (null): 8.24
-Cohen's d: 4.19
-Bayes Factor: 21.6
-✓ Pattern validated
-```
-
-### Custom Analysis
+### Basic Usage
 
 ```python
 from ancient_text_dsh import AnalysisConfig, AncientTextAnalysisPipeline
 
 # Configure analysis
 config = AnalysisConfig(
-    data_dir='custom/path',
-    output_dir='custom/output',
-    random_seed=123,
-    n_permutations=20000,
+    data_dir='data/',
+    output_dir='results/',
+    n_permutations=50000,
     n_bayesian_draws=5000,
     enable_bayesian=True,
-    significance_level=0.01,
-    fdr_level=0.05
+    significance_level=0.01
 )
 
-# Run pipeline
+# Run complete pipeline
 pipeline = AncientTextAnalysisPipeline(config)
 results = pipeline.run_complete_analysis()
 
-# Access results
+# View validated patterns
 print(f"Validated patterns: {len(results['validated_patterns'])}")
 print(f"Mean Bayes Factor: {results['summary']['mean_bayes_factor']:.2f}")
-print(f"FDR-adjusted significance: {results['summary']['fdr_threshold']:.4f}")
 ```
 
-### Interactive Notebooks
+### Jupyter Notebooks
+
+Interactive tutorials available in `notebooks/`:
+
+1. `01_exploratory_analysis.ipynb` — Data exploration
+2. `02_permutation_tests.ipynb` — Statistical testing
+3. `03_bayesian_validation.ipynb` — Bayesian inference
+4. `04_diachronic_checks.ipynb` — Manuscript comparison
+5. `05_expert_panel_analysis.ipynb` — Delphi protocol
+6. `06_sensitivity_analyses.ipynb` — Robustness checks
 
 ```bash
 jupyter notebook notebooks/
 ```
 
-Start with:
-- `01_exploratory_analysis.ipynb` — Data exploration and visualization
-- `02_permutation_tests.ipynb` — Statistical testing walkthrough
-- `03_bayesian_validation.ipynb` — Bayesian inference tutorial
-- `04_diachronic_checks.ipynb` — Manuscript comparison
-
 ---
 
-## 📁 Repository Structure
+## 📊 Validation Results
 
-```
-Ancient-Text-Numerical-Analysis-v-0.4/
-├── README.md                          # This file
-├── LICENSE                            # MIT License
-├── CHANGELOG.md                       # Version history
-├── requirements.txt                   # Python dependencies
-├── setup.py                           # Package installation
-│
-├── data/                              # Source texts and annotations
-│   ├── genesis_leningrad.txt          # Westminster Leningrad Codex (Genesis)
-│   ├── structural_markers.json        # Pre-registered markers (43 total)
-│   ├── gematria_map.csv              # Hebrew letter → numeric values
-│   ├── key_patterns.json              # 5 validated patterns with stats
-│   ├── analysis_config.json           # Pre-registered parameters
-│   └── cultural_systems/              # Greek, Arabic mappings
-│       ├── greek_isopsephy.json
-│       └── arabic_abjad.json
-│
-├── src/                               # Core analysis modules
-│   ├── __init__.py
-│   ├── ancient_text_dsh.py            # Main analysis script
-│   ├── permutation_tests.py           # Permutation test implementation
-│   ├── bayesian_analysis.py           # Bayes Factor calculations
-│   ├── gematria_calculator.py         # Multi-cultural gematria
-│   ├── diachronic_validation.py       # Manuscript comparison
-│   ├── expert_panel_analysis.py       # Delphi protocol scoring
-│   ├── fdr_correction.py              # Benjamini-Hochberg FDR
-│   ├── visualization_tools.py         # Plotting functions
-│   └── theorem_demonstrations.py      # Mathematical proofs verification
-│
-├── notebooks/                         # Interactive analysis
-│   ├── 01_exploratory_analysis.ipynb
-│   ├── 02_permutation_tests.ipynb
-│   ├── 03_bayesian_validation.ipynb
-│   ├── 04_diachronic_checks.ipynb
-│   ├── 05_expert_panel_analysis.ipynb
-│   └── 06_sensitivity_analyses.ipynb
-│
-├── results/                           # Analysis outputs
-│   ├── permutation_outputs.csv        # P-values for all patterns
-│   ├── bayes_factors.csv              # BF calculations
-│   ├── expert_scores.csv              # Delphi panel results
-│   ├── diachronic_stability.csv       # Manuscript preservation
-│   ├── theorem_verification_results.json
-│   └── figures/                       # Publication-ready plots
-│       ├── theorem1_type1_control.png
-│       ├── theorem2_bf_consistency.png
-│       ├── theorem3_fdr_control.png
-│       ├── gematria_distribution.png
-│       ├── multiples_analysis.png
-│       └── cross_cultural_heatmap.png
-│
-├── docs/                              # Documentation
-│   ├── METHODOLOGY.md                 # Detailed methods
-│   ├── mathematical_proofs.pdf        # Complete proofs (25 pages)
-│   ├── mathematical_proofs.tex        # LaTeX source
-│   ├── proofs_summary.pdf             # 5-page summary
-│   ├── references.bib                 # BibTeX bibliography (40+ refs)
-│   ├── technical_slide.html           # Permutation visualization
-│   ├── infographic.html               # Framework visual summary
-│   └── appendix_A_methodology.md      # Complete technical appendix
-│
-├── tests/                             # Unit and integration tests
-│   ├── __init__.py
-│   ├── test_permutation.py
-│   ├── test_bayesian.py
-│   ├── test_gematria.py
-│   ├── test_fdr.py
-│   ├── test_statistics.py
-│   └── test_pipeline.py
-│
-└── supplementary/                     # Additional materials
-    ├── presentation_beamer.pdf        # Conference slides
-    ├── poster_DSH2025.pdf             # Conference poster
-    └── media/                         # Presentation figures
-```
-
----
-
-## 🔬 Methodology
-
-### Phase 1: Unsupervised Discovery
-
-Unsupervised detection of pattern candidates:
-
-- **Input**: Text corpus T, pre-registered markers M
-- **Output**: Candidate patterns exceeding k=2 standard deviations
-- **Methods**:
-  - Frequency analysis (lexical distribution)
-  - Gematria calculation (multiple cultural systems)
-  - Co-occurrence detection (term proximity analysis)
-  - Positional clustering (structural marker association)
-
-**Critical**: Discovery phase uses no hypothesis testing to avoid data mining. All candidates subjected to independent validation.
-
-### Phase 2: Multi-Method Statistical Validation
-
-Statistical validation with multiple independent methods:
-
-- **Permutation tests**: 10,000-50,000 iterations, exact p-values
-  - Null model: Random lexical permutation preserving frequencies
-  - One-tailed test: P(X ≥ observed | H₀)
-  - Effect size: Cohen's d with 95% bootstrap CI
-
-- **Bayesian analysis**: Bayes Factors with Beta priors (BF > 10 threshold)
-  - Model comparison: H₀ (random) vs. H₁ (structured)
-  - Hierarchical Beta-Binomial models
-  - Prior sensitivity analysis
-
-- **Bootstrap CI**: 10,000 resamples, 95% confidence intervals
-  - BCa (bias-corrected and accelerated) method
-  - Percentile method for comparison
-
-- **FDR correction**: Benjamini-Hochberg at q=0.05
-  - Controls expected proportion of false discoveries
-  - More powerful than Bonferroni for multiple hypotheses
-
-- **Effect sizes**: Cohen's d, h with interpretation guidelines
-  - Small (0.2), medium (0.5), large (0.8) effects
-  - Standardized for cross-pattern comparison
-
-- **Power analysis**: Sample size adequacy (target power ≥ 0.80)
-  - Post-hoc power calculation
-  - Ensures sufficient sensitivity to detect effects
-
-### Phase 3: Structured Expert Consensus
-
-Expert consensus via modified Delphi protocol:
-
-- **Panel**: 12 experts (4 philologists, 3 statisticians, 3 historians, 2 textual critics)
-- **Protocol**: Modified Delphi with 3 rounds
-  - **Round 1**: Blind assessment (no statistical results)
-  - **Round 2**: Re-evaluation with statistical disclosure
-  - **Round 3**: Consensus discussion with facilitation
-
-- **Scoring**: 0-10 scale across 4 criteria
-  - Historical plausibility (0-3 points)
-  - Textual coherence (0-3 points)
-  - Manuscript stability (0-2 points)
-  - Statistical strength (0-2 points)
-
-- **Threshold**: Mean ≥ 7.0 with SD ≤ 1.5
-
-### Combined Validation Criteria
-
-A pattern is validated if and only if **ALL** criteria are met:
-
-✅ Permutation p-value < 0.01  
-✅ Bayes Factor > 10 (strong evidence)  
-✅ Expert consensus ≥ 7.0  
-✅ Diachronic stability ≥ 90%
-
-**Mathematical Formulation**:
-
-**Theorem (Combined Type-I Error Control)**: Under the global null hypothesis, the framework controls family-wise error rate at α ≤ 0.05.
-
-**Proof**: See [`docs/mathematical_proofs.pdf`](docs/mathematical_proofs.pdf) (Theorem 4, page 12).
-
----
-
-## 💻 Usage Examples
-
-### Multi-Cultural Gematria Calculation
-
-```python
-from ancient_text_dsh import compute_gematria, CulturalSystem
-
-# Hebrew (standard)
-hebrew_value = compute_gematria('בראשית', CulturalSystem.HEBREW_STANDARD)
-print(f"Hebrew (standard): {hebrew_value}")  # 913
-
-# Hebrew (Atbash)
-atbash_value = compute_gematria('בראשית', CulturalSystem.HEBREW_ATBASH)
-print(f"Hebrew (Atbash): {atbash_value}")    # 1235
-
-# Greek Isopsephy
-greek_value = compute_gematria('λόγος', CulturalSystem.GREEK_ISOPSEPHY)
-print(f"Greek: {greek_value}")  # 373
-
-# Arabic Abjad
-arabic_value = compute_gematria('بسم', CulturalSystem.ARABIC_ABJAD)
-print(f"Arabic: {arabic_value}")  # 102
-```
-
-### Batch Processing
-
-```python
-from pathlib import Path
-from ancient_text_dsh import AnalysisConfig, AncientTextAnalysisPipeline
-
-# Process entire corpus
-corpus_files = Path('corpus').glob('*.txt')
-
-for file in corpus_files:
-    print(f"Analyzing {file.name}...")
-    
-    config = AnalysisConfig(
-        data_dir=file.parent,
-        output_dir=Path('results') / file.stem,
-        n_permutations=50000
-    )
-    
-    pipeline = AncientTextAnalysisPipeline(config)
-    results = pipeline.run_complete_analysis()
-    
-    print(f"  Validated: {len(results['validated_patterns'])} patterns")
-```
-
-### Custom Pattern Analysis
-
-```python
-from src.permutation_tests import permutation_test
-import numpy as np
-
-# Your custom data
-observed_frequencies = [17, 12, 23, 9, 15]
-expected_baseline = 0.15  # Expected proportion
-
-# Run permutation test
-result = permutation_test(
-    observed=observed_frequencies,
-    baseline=expected_baseline,
-    n_iterations=50000,
-    seed=42
-)
-
-print(f"P-value: {result['p_value']:.5f}")
-print(f"Cohen's d: {result['cohens_d']:.2f}")
-print(f"95% CI: [{result['ci_lower']:.2f}, {result['ci_upper']:.2f}]")
-```
-
-### Bayesian Model Comparison
-
-```python
-from src.bayesian_analysis import bayesian_model_comparison
-
-# Compare null vs. enrichment models
-comparison = bayesian_model_comparison(
-    data=observed_counts,
-    model_null='binomial',
-    model_alternative='beta_binomial',
-    n_samples=5000
-)
-
-print(f"WAIC difference: {comparison['delta_waic']:.2f}")
-print(f"Evidence for alternative: {comparison['interpretation']}")
-print(f"Bayes Factor: {comparison['bayes_factor']:.1f}")
-```
-
----
-
-## 📊 Analysis Pipeline
-
-```
-1. Data Preprocessing
-   ├── Validate encoding (UTF-8)
-   ├── Normalize text (final letter forms)
-   ├── Extract segments (windows)
-   └── Compute numerical values
-
-2. Gematria Analysis
-   ├── Statistical summaries
-   ├── Distribution testing
-   ├── Cross-cultural comparison
-   └── Visualization
-
-3. Frequentist Validation
-   ├── Multiples enrichment (7, 12, 26, 30, 60)
-   ├── Binomial tests
-   ├── Permutation tests (10k-50k iter)
-   ├── FDR correction
-   └── Effect sizes + CI
-
-4. Bayesian Analysis (optional)
-   ├── Hierarchical modeling
-   ├── MCMC sampling (4 chains)
-   ├── Convergence diagnostics
-   ├── Model comparison (WAIC/LOO)
-   └── Posterior predictive checks
-
-5. Sensitivity Analysis
-   ├── Window size variations
-   ├── Sampling strategies
-   ├── Parameter robustness
-   └── Bootstrap stability
-
-6. Expert Validation
-   ├── Delphi Round 1 (blind)
-   ├── Delphi Round 2 (with stats)
-   ├── Delphi Round 3 (consensus)
-   └── Final scoring
-
-7. Diachronic Validation
-   ├── Manuscript comparison
-   ├── Stability calculation
-   └── Transmission analysis
-
-8. Report Generation
-   ├── JSON results
-   ├── Markdown report
-   ├── Publication figures
-   └── Summary tables
-```
-
----
-
-## 📈 Interpreting Results
-
-### Significance Thresholds
+### Statistical Criteria
 
 | Criterion | Threshold | Interpretation |
 |-----------|-----------|----------------|
-| **P-value** | < 0.01 | Highly significant (after FDR correction) |
-| | 0.01-0.05 | Significant |
-| | > 0.05 | Not significant |
-| **Bayes Factor** | > 100 | Decisive evidence for H₁ |
-| | 30-100 | Very strong evidence |
-| | 10-30 | Strong evidence |
-| | 3-10 | Moderate evidence |
-| | 1-3 | Weak evidence |
-| | < 1 | Evidence for H₀ |
-| **Effect Size (d)** | > 2.0 | Very large effect |
-| | 0.8-2.0 | Large effect |
-| | 0.5-0.8 | Medium effect |
-| | 0.2-0.5 | Small effect |
-| | < 0.2 | Negligible effect |
-| **Expert Score** | ≥ 7.0 | Pattern probably meaningful |
-| | 4.0-7.0 | Uncertain, needs more evidence |
-| | < 4.0 | Probably spurious |
+| **P-value** | < 0.01 | Highly significant (post-FDR) |
+| **Bayes Factor** | > 10 | Strong evidence for H₁ |
+| **Effect Size (d)** | > 0.8 | Large effect |
+| **Expert Score** | ≥ 7.0 | Pattern likely meaningful |
 | **Stability** | ≥ 90% | Robust across manuscripts |
-| | 70-90% | Moderate stability |
-| | < 70% | Questionable transmission |
 
-### WAIC/LOO Interpretation
+### Model Comparison
 
-- **ΔWAIC < 2**: Models similar, no clear preference
-- **2 < ΔWAIC < 6**: Moderate evidence for better model
-- **ΔWAIC > 6**: Strong evidence for better model
-
-### Sensitivity and Robustness
-
-- **CV < 0.3**: Robust results, conclusions reliable
-- **0.3 < CV < 0.5**: Moderate sensitivity, interpret with caution
-- **CV > 0.5**: High sensitivity, results unstable
+- **ΔWAIC < 2:** Models similar
+- **2 < ΔWAIC < 6:** Moderate evidence
+- **ΔWAIC > 6:** Strong evidence
 
 ### Power Analysis
 
-- **Power > 0.8**: Adequate sample size for detecting effect
-- **0.6 < Power < 0.8**: Moderate power, consider larger sample
-- **Power < 0.6**: Underpowered, high risk of Type-II error
-
-### Combined Validation
-
-For full validation, a pattern should demonstrate:
-
-✅ Statistical significance (p < 0.01, BF > 10)  
-✅ Large effect size (d > 0.8)  
-✅ Expert consensus (score ≥ 7.0)  
-✅ Manuscript stability (≥ 90%)  
-✅ Robustness to variations (CV < 0.5)
+- **Power > 0.8:** Adequate sample size
+- **0.6-0.8:** Moderate power
+- **< 0.6:** Underpowered
 
 ---
 
-## 🧪 Testing
+## 📚 Documentation
 
-### Complete Test Suite
+### Main Documentation
 
-```bash
-# All tests with coverage
-pytest tests/ -v --cov=ancient_text_dsh --cov-report=html
+- **[METHODOLOGY.md](docs/METHODOLOGY.md)** — Complete methodological details
+- **[Mathematical Proofs](docs/mathematical_proofs.pdf)** — 25 pages, 7 formal theorems
+- **[Proofs Summary](docs/proofs_summary.pdf)** — 5-page condensed version
+- **[Technical Article](dsh_technical_article.md)** — Manuscript draft
+- **[Expert Panel Documentation](documentation_panel_expert%20(1).md)** — Delphi protocol
 
-# Quick smoke tests
-pytest tests/ -x -v
+### Supplementary Materials
 
-# Specific test categories
-pytest tests/test_gematria.py -v        # Gematria calculations
-pytest tests/test_statistics.py -v      # Statistical methods
-pytest tests/test_pipeline.py -v        # Integration tests
-pytest tests/test_bayesian.py -v        # Bayesian inference
+- **[Executive Summary](dsh_executive_summary.md)** — High-level overview
+- **[Methodology Appendix](méthodologie_annexe.md)** — Technical appendix
+- **[Framework Implementation](dsh_framework.py)** — Core code
+- **[Contributing Guide](dsh_contributing.md)** — Contribution guidelines
+
+### Interactive Resources
+
+- **[Permutation Test Visualization](diapositive_test_permutation.html)** — Interactive slide
+- **[3D Framework Visual](framework-3d-visual.tsx)** — Visual representation
+
+### Bibliography
+
+- **[References](docs/references.bib)** — BibTeX format (40+ references)
+
+---
+
+## 🔄 Reproducibility
+
+### Pre-registration
+
+**All hypotheses, markers, and parameters were pre-registered** before statistical testing:
+
+- **OSF Registration:** [https://doi.org/10.17605/OSF.IO/GXQH6](https://doi.org/10.17605/OSF.IO/GXQH6)
+- **Registration Date:** November 13, 2025
+- **Status:** Locked and immutable
+
+**Pre-registered components:**
+- Structural marker definitions
+- Target lexeme selection criteria
+- Statistical test specifications
+- Exclusion criteria for textual variants
+
+### Deterministic Seeds
+
+All stochastic procedures use **fixed random seeds**:
+
+```python
+RANDOM_SEEDS = {
+    'permutation_tests': 42,
+    'bootstrap_resampling': 123,
+    'bayesian_mcmc': 456,
+    'train_test_split': 789
+}
 ```
 
-### Coverage Report
+### Environment Specification
 
-```bash
-pytest tests/ --cov=ancient_text_dsh --cov-report=term-missing
+Analysis performed on:
+- **OS:** Ubuntu 20.04 LTS / macOS 13+
+- **Python:** 3.9+
+- **Key packages:** NumPy 1.24.3, SciPy 1.10.1, PyMC 5.6.0
+- **Total runtime:** ~8 hours (full analysis with Bayesian methods)
+
+Complete environment: `requirements.txt`
+
+### Permanent Archiving
+
+This repository is permanently archived with:
+
+- **Pre-registration:** [OSF 10.17605/OSF.IO/GXQH6](https://doi.org/10.17605/OSF.IO/GXQH6) ✅
+- **Code Archive:** [Zenodo DOI: [TO BE ADDED]](https://zenodo.org/) ⏳
+- **GitHub Repository:** [v4.5-DSH Release](https://github.com/benseddikahmed-sudo/Ancient-Text-Numerical-Analysis-v-0.4/releases) ⏳
+
+---
+
+## 📖 Citation
+
+If you use this framework in your research, please cite:
+
+### Software Citation
+
+```bibtex
+@software{benseddik2025ancient,
+  author = {Benseddik, Ahmed},
+  title = {Ancient Text Numerical Analysis Framework},
+  version = {4.5-DSH},
+  year = {2025},
+  doi = {10.17605/OSF.IO/GXQH6},
+  url = {https://github.com/benseddikahmed-sudo/Ancient-Text-Numerical-Analysis-v-0.4},
+  note = {Pre-registered at OSF}
+}
 ```
 
-**Coverage target**: > 85%
+### Article Citation (Upon Publication)
 
-### Theorem Verification
-
-```bash
-python src/theorem_demonstrations.py
+```bibtex
+@article{benseddik2025threephase,
+  author = {Benseddik, Ahmed},
+  title = {A Three-Phase Computational Framework for Detecting Numerical Patterns in Ancient Texts: Statistical Validation, Bayesian Inference, and Expert Consensus},
+  journal = {Digital Scholarship in the Humanities},
+  year = {2025},
+  doi = {[TO BE ADDED UPON PUBLICATION]},
+  note = {Code: \url{https://github.com/benseddikahmed-sudo/Ancient-Text-Numerical-Analysis-v-0.4}}
+}
 ```
 
-**Expected Output**:
-```
-======================================================================
-THEOREM 1: Type-I Error Control
+### Quick Citation (APA Style)
+
+Benseddik, A. (2025). *Ancient Text Numerical Analysis Framework* (Version 4.5-DSH) [Computer software]. https://doi.org/10.17605/OSF.IO/GXQH6
+
+---
+
+## 🤝 Contributing
+
+We welcome contributions from the community! Please see our [Contributing Guide](dsh_contributing.md) for:
+
+- Code of conduct
+- How to report bugs
+- How to suggest enhancements
+- Pull request process
+- Coding standards
+
+### Areas for Contribution
+
+- Extension to other biblical books (Psalms, Prophets)
+- Additional cultural numerical systems (Coptic, Syriac)
+- Alternative statistical methods
+- Visualization improvements
+- Documentation enhancements
+
+### Getting Help
+
+- **Questions:** Open a [GitHub Issue](https://github.com/benseddikahmed-sudo/Ancient-Text-Numerical-Analysis-v-0.4/issues)
+- **Bugs:** Use issue tracker with `bug` label
+- **Feature Requests:** Use issue tracker with `enhancement` label
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
+
+### What This Means
+
+✅ **You can:**
+- Use the code for any purpose (academic, commercial, personal)
+- Modify and adapt the code
+- Distribute the code and modifications
+- Include in proprietary software
+
+⚠️ **You must:**
+- Include the original license and copyright notice
+- State significant changes made to the code
+
+❌ **We are not responsible for:**
+- Any warranties or guarantees
+- Liability for damages or issues
+
+---
+
+## 📧 Contact
+
+**Ahmed Benseddik**  
+Independent Digital Humanities Researcher, France
+
+- **Email:** [benseddik.ahemd@gmail.com](mailto:benseddik.ahemd@gmail.com)
+- **ORCID:** [0009-0005-6308-8171](https://orcid.org/0009-0005-6308-8171)
+- **GitHub:** [@benseddikahmed-sudo](https://github.com/benseddikahmed-sudo)
+- **OSF:** [osf.io/gxqh6](https://osf.io/gxqh6/)
+
+### For Inquiries
+
+- **Methodology & Implementation:** Open a [GitHub Issue](https://github.com/benseddikahmed-sudo/Ancient-Text-Numerical-Analysis-v-0.4/issues)
+- **Collaboration & Research:** Email directly
+- **Media & Press:** Email directly
+- **Bug Reports:** Use GitHub Issues with `bug` label
+
+### Acknowledgments
+
+This framework was developed independently without external funding. Special thanks to the digital humanities community for methodological inspiration and to all contributors who have helped improve this work.
+
+If you use this framework in your research, please cite it appropriately. This helps us track impact and secure future support for development.
+
+---
+
+## 🌟 Key Contributions to Digital Humanities
+
+This framework makes three distinct contributions:
+
+1. **Methodological:** First replicable validation protocol combining computational discovery, statistical rigor, and expert consensus for ancient text analysis
+
+2. **Theoretical:** Formal mathematical proofs (7 theorems) establishing conditions for defensible pattern claims
+
+3. **Practical:** Open-source implementation enabling other researchers to apply rigorous validation to their own corpora
+
+---
+
+## 📊 Project Status
+
+- ✅ **Development:** Complete (v4.5)
+- ✅ **Testing:** All tests passing
+- ✅ **Documentation:** Comprehensive
+- ✅ **Pre-registration:** OSF locked
+- ⏳ **Publication:** Submitted to DSH (November 2025)
+- ⏳ **Archiving:** Zenodo DOI pending
+
+---
+
+## 🔮 Future Directions
+
+- Extension to Psalms and Prophetic books
+- Comparative analysis across biblical corpus
+- Cross-cultural numerical pattern investigation
+- Machine learning for pattern discovery
+- Web-based interactive interface
+- Integration with existing biblical databases
+
+---
+
+**Last Updated:** November 2025  
+**Version:** 4.5-DSH  
+**Status:** Publication-ready  
+
+---
+
+*For the complete technical article and supplementary materials, see [dsh_technical_article.md](dsh_technical_article.md)*
