@@ -1,6 +1,8 @@
 [README_FINAL_CORRIGE.md](https://github.com/user-attachments/files/23575551/README_FINAL_CORRIGE.md)
 # Ancient-Text-Numerical-Analysis-v-0.4
-
+[![DOI](https://img.shields.io/badge/DOI-10.17605%2FOSF.IO%2FXXXXX-blue)](https://osf.io/xxxxx/)
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
+[![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
 [![DOI OSF](https://img.shields.io/badge/OSF-10.17605%2FOSF.IO%2FGXQH6-blue.svg)](https://doi.org/10.17605/OSF.IO/GXQH6)
 [![DOI Zenodo](https://zenodo.org/badge/DOI/[ZENODO-DOI].svg)](https://doi.org/[ZENODO-DOI])
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
