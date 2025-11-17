@@ -4,7 +4,6 @@
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
 [![DOI OSF](https://img.shields.io/badge/OSF-10.17605%2FOSF.IO%2FGXQH6-blue.svg)](https://doi.org/10.17605/OSF.IO/GXQH6)
 [![DOI Zenodo](https://zenodo.org/badge/DOI/[ZENODO-DOI].svg)](https://doi.org/[ZENODO-DOI])
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
 
 > **A rigorous, reproducible computational framework for detecting and validating numerical patterns in ancient texts**
