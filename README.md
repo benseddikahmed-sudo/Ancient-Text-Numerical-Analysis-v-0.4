@@ -2,8 +2,7 @@
 # Ancient-Text-Numerical-Analysis-v-0.4
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
-[![DOI OSF](https://img.shields.io/badge/OSF-10.17605%2FOSF.IO%2FGXQH6-blue.svg)](https://doi.org/10.17605/OSF.IO/GXQH6)
-[![DOI Zenodo](https://zenodo.org/badge/DOI/[ZENODO-DOI].svg)](https://doi.org/[ZENODO-DOI])
+[![DOI OSF](https://img.shields.io/badge/OSF-10.17605%2FOSF.IO%2FGXQH6-blue.svg)](https://doi.org/10.17605/OSF.IO/GXQH6) (![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17643428.svg)](https://doi.org/10.5281/zenodo.17643428)
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
 
 > **A rigorous, reproducible computational framework for detecting and validating numerical patterns in ancient texts**
