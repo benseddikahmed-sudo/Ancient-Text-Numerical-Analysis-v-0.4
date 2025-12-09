@@ -294,16 +294,16 @@ Full ethical framework: See `docs/ethical_guidelines.md` and Supplementary Mater
   volume={[volume]},
   number={[issue]},
   pages={[pages]},
-  doi={[DOI]},
+  doi={{10.17605/OSF.IO/GXQH6},
   url={https://doi.org/10.17605/OSF.IO/GXQH6}
 }
 ```
 
 **Software:**
 ```bibtex
-@software{author2025gematria,
+@software{Benseddik.Ahmed 2025gematria,
   title={gematria-framework},
-  author={[Author Name]},
+  author={Benseddik.Ahmed},
   year={2025},
   version={1.0.0},
   doi={10.17605/OSF.IO/GXQH6},
