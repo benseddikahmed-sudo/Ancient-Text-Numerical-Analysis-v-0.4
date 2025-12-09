@@ -288,13 +288,13 @@ Full ethical framework: See `docs/ethical_guidelines.md` and Supplementary Mater
 ```bibtex
 @article{author2025framework,
   title={A Three-Phase Statistical Framework for Computational Analysis of Numerical Patterns in Ancient Texts: Methodology, Implementation, and Critical Reflection},
-  author={[Author Name]},
+  author={Benseddik.Ahmed,
   journal={Digital Scholarship in the Humanities},
   year={2025},
   volume={[volume]},
   number={[issue]},
   pages={[pages]},
-  doi={[DOI]},
+  doi={{10.17605/OSF.IO/GXQH6},
   url={https://doi.org/10.17605/OSF.IO/GXQH6}
 }
 ```
@@ -303,7 +303,7 @@ Full ethical framework: See `docs/ethical_guidelines.md` and Supplementary Mater
 ```bibtex
 @software{author2025gematria,
   title={gematria-framework},
-  author={[Author Name]},
+  author={Benseddik.Ahmed},
   year={2025},
   version={1.0.0},
   doi={10.17605/OSF.IO/GXQH6},
@@ -390,9 +390,9 @@ See `supplementary_materials.pdf` Section S9 for 20 detailed FAQs.
 ## Contact
 
 **Lead Researcher:**  
-[Name]  
+Benseddik.Ahmed  
 [Institution, Department]  
-[Email]  
+benseddik.ahmed@gmail.com  
 [ORCID: https://orcid.org/0009-0005-6308-8171
 
 **Collaboration Inquiries Welcome:**
